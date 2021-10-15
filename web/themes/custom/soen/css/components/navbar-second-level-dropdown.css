@@ -1,0 +1,86 @@
+body {
+  background-color: blue;
+}
+
+.navbar .dropdown-menu .nav-link::after {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .navbar-collapse {
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .navbar-nav {
+    height: 100%;
+  }
+  .navbar-nav > .nav-item > .nav-link {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-nav {
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .navbar-collapse {
+    -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+                -ms-grid-row-align: stretch;
+            align-self: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .navbar-nav {
+    height: 100%;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .navbar-nav > .nav-item > .nav-link {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .navbar-nav .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+  .navbar-nav > .dropdown > .dropdown-menu {
+    margin-top: 0;
+  }
+  .navbar-nav > .dropdown > .dropdown-menu .nav-link {
+    padding: 0.25rem 1.5rem;
+    color: #007bff;
+  }
+  .navbar-nav > .dropdown > .dropdown-menu .nav-link:hover, .navbar-nav > .dropdown > .dropdown-menu .nav-link:focus {
+    background-color: #f8f9fa;
+    color: #006fe6;
+  }
+  .navbar-nav > .dropdown > .dropdown-menu .nav-link.is-active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  .navbar-nav > .dropdown > .dropdown-menu .nav-link::before {
+    display: none;
+  }
+  .navbar-nav > .dropdown > .dropdown-menu .dropdown-toggle::after {
+    display: none;
+  }
+}

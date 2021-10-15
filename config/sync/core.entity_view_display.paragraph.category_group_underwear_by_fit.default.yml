@@ -1,0 +1,40 @@
+uuid: 2975dd8d-433e-4146-a23b-25a9db2e6ce7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.category_group_underwear_by_fit.field_l2_page_reference
+    - field.field.paragraph.category_group_underwear_by_fit.field_parent_term
+    - field.field.paragraph.category_group_underwear_by_fit.field_product_reference
+    - paragraphs.paragraphs_type.category_group_underwear_by_fit
+id: paragraph.category_group_underwear_by_fit.default
+targetEntityType: paragraph
+bundle: category_group_underwear_by_fit
+mode: default
+content:
+  field_l2_page_reference:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_parent_term:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_product_reference:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  search_api_excerpt: true

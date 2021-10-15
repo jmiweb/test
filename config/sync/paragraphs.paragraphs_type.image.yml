@@ -1,0 +1,15 @@
+uuid: b4819e51-4480-4786-a1fa-f7aa4129f32f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/soen_theme/assets/paragraph-type-icons/Image.png
+id: image
+label: Image
+icon_uuid: null
+icon_default: null
+description: 'Upload an image '
+behavior_plugins: {  }

@@ -1,0 +1,11 @@
+body {
+  background-color: blue;
+}
+
+.block {
+  margin-bottom: 1rem;
+}
+
+.contextual-region .contextual .contextual-links a {
+  color: #333;
+}

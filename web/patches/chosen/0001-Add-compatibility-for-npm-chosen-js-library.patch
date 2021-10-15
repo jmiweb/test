@@ -1,0 +1,25 @@
+From f4b81e84fe6862cd062ec011bc40aabd2e84107c Mon Sep 17 00:00:00 2001
+From: Afraaz Ali <afraaz@appnovation.com>
+Date: Thu, 9 Nov 2017 13:17:45 -0800
+Subject: [PATCH 1/1] Add compatibility for npm chosen-js library
+
+---
+ modules/chosen_lib/chosen_lib.module | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/modules/chosen_lib/chosen_lib.module b/modules/chosen_lib/chosen_lib.module
+index 43b33a8..8958bf4 100644
+--- a/modules/chosen_lib/chosen_lib.module
++++ b/modules/chosen_lib/chosen_lib.module
+@@ -37,7 +37,7 @@ function chosen_lib_library_info_alter(array &$libraries, $module) {
+  */
+ function _chosen_lib_get_chosen_path() {
+   if (function_exists('libraries_get_path')) {
+-    return libraries_get_path('chosen');
++    return libraries_get_path('chosen') ? libraries_get_path('chosen') : libraries_get_path('chosen-js');
+   }
+ 
+   // The following logic is taken from libraries_get_libraries()
+-- 
+2.15.0
+

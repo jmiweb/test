@@ -1,0 +1,23 @@
+diff --git a/js/maxlength.js b/js/maxlength.js
+index 9df04ee..014f521 100644
+--- a/js/maxlength.js
++++ b/js/maxlength.js
+@@ -316,12 +316,12 @@
+           e.editor.on('key', function(e) {
+             setTimeout(function(){ml.ckeditorChange(e)}, 100);
+           });
+-          e.editor.on('paste', function(e) {
+-            setTimeout(function(){ml.ckeditorChange(e)}, 500);
+-          });
+-          e.editor.on('elementsPathUpdate', function(e) {
+-            setTimeout(function(){ml.ckeditorChange(e)}, 100);
+-          });
++          // e.editor.on('paste', function(e) {
++          //   setTimeout(function(){ml.ckeditorChange(e)}, 500);
++          // });
++          // e.editor.on('elementsPathUpdate', function(e) {
++          //   setTimeout(function(){ml.ckeditorChange(e)}, 100);
++          // });
+         }
+       });
+     }

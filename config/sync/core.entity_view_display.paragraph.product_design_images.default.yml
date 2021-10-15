@@ -1,0 +1,33 @@
+uuid: 43a0e601-969e-4676-98cf-fbb9251f758d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.product_design_images.field_prod_design_img_main
+    - field.field.paragraph.product_design_images.field_prod_design_img_thumbnail
+    - paragraphs.paragraphs_type.product_design_images
+id: paragraph.product_design_images.default
+targetEntityType: paragraph
+bundle: product_design_images
+mode: default
+content:
+  field_prod_design_img_main:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_prod_design_img_thumbnail:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

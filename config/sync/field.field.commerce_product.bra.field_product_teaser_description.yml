@@ -1,0 +1,21 @@
+uuid: 197825ed-2565-4e2c-a798-a550ae85100a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.bra
+    - field.storage.commerce_product.field_product_teaser_description
+  module:
+    - text
+id: commerce_product.bra.field_product_teaser_description
+field_name: field_product_teaser_description
+entity_type: commerce_product
+bundle: bra
+label: 'Teaser Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

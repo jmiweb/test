@@ -1,0 +1,12 @@
+uuid: 3eb7cacb-9a1f-48be-b8d2-8fb9173e9bf0
+langcode: en
+status: true
+dependencies: {  }
+id: underwear
+label: Underwear
+description: ''
+variationType: underwear
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

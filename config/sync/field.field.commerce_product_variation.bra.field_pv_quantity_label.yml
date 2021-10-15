@@ -1,0 +1,19 @@
+uuid: a79592e4-7a05-4eeb-bd5a-5eb9d53c9912
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.bra
+    - field.storage.commerce_product_variation.field_pv_quantity_label
+id: commerce_product_variation.bra.field_pv_quantity_label
+field_name: field_pv_quantity_label
+entity_type: commerce_product_variation
+bundle: bra
+label: 'Quantity Label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

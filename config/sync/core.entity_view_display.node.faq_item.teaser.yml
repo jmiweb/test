@@ -1,0 +1,28 @@
+uuid: a22a646e-5433-4299-8ff4-c1b8bdf91205
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faq_item.field_faq_answer
+    - field.field.node.faq_item.field_faq_category
+    - field.field.node.faq_item.field_faq_question
+    - node.type.faq_item
+  module:
+    - user
+id: node.faq_item.teaser
+targetEntityType: node
+bundle: faq_item
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_faq_answer: true
+  field_faq_category: true
+  field_faq_question: true
+  langcode: true
+  search_api_excerpt: true

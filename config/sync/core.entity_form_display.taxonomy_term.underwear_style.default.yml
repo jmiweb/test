@@ -1,0 +1,57 @@
+uuid: e184e145-a002-41b7-8deb-568d21d388d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.underwear_style.field_listing_splash_image
+    - taxonomy.vocabulary.underwear_style
+  module:
+    - media_library
+    - path
+id: taxonomy_term.underwear_style.default
+targetEntityType: taxonomy_term
+bundle: underwear_style
+mode: default
+content:
+  field_listing_splash_image:
+    type: media_library_widget
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true

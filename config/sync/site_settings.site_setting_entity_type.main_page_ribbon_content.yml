@@ -1,0 +1,8 @@
+uuid: 0339e10e-511b-46e5-bdb4-8d04ae96e573
+langcode: en
+status: true
+dependencies: {  }
+id: main_page_ribbon_content
+label: 'Main Page Ribbon Content'
+fieldset: 'Global Elements'
+multiple: false

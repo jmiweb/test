@@ -1,0 +1,19 @@
+uuid: 4d446aa4-870c-410b-b088-bae07f237e3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - link
+id: commerce_product_variation.field_buy_now_link_lazada
+field_name: field_buy_now_link_lazada
+entity_type: commerce_product_variation
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,61 @@
+uuid: 9e249f6e-d723-4794-8e79-d180a5daa4f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.category_group_underwear_by_coll.field_l2_page_reference
+    - field.field.paragraph.category_group_underwear_by_coll.field_parent_term
+    - field.field.paragraph.category_group_underwear_by_coll.field_product_reference
+    - paragraphs.paragraphs_type.category_group_underwear_by_coll
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_links_to_pages_products:
+      children:
+        - field_l2_page_reference
+        - field_product_reference
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Links to Pages / Products'
+id: paragraph.category_group_underwear_by_coll.default
+targetEntityType: paragraph
+bundle: category_group_underwear_by_coll
+mode: default
+content:
+  field_l2_page_reference:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: 'Start typing the title of the L2 page you wish to reference'
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_parent_term:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_product_reference:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: 'Search for product by Prefix / Admin title'
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,28 @@
+/* IMPORTS */
+
+//@import url(font-awesome.min.css);
+// variables
+@import "variables";
+// typography
+@import "typography";
+// animation
+@import "motion";
+//bootstrap
+@import "bootstrap";
+// mixins
+@import "mixins";
+// barrio
+@import "barrio";
+
+// theme
+@import "partials/global";
+@import "partials/paragraph-image";
+@import "partials/paragraph-text-banner";
+@import "partials/paragraph-simple-text";
+@import "partials/paragraph-text-with-image";
+@import "partials/paragraph-promotions";
+@import "partials/paragraph-contact-form";
+@import "partials/faq";
+@import "partials/forms";
+@import "partials/product-page";
+@import "partials/l1-page";

@@ -1,0 +1,15 @@
+uuid: 2e0df978-eb89-435d-b329-7650044bcf3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/soen_theme/assets/paragraph-type-icons/textWithImage.png
+id: text_with_image
+label: 'Text With Image'
+icon_uuid: null
+icon_default: null
+description: 'Headline, caption and Image with option to change the image placement/orientation'
+behavior_plugins: {  }

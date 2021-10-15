@@ -1,0 +1,21 @@
+uuid: 70376739-d945-4fdc-85b7-83027b10aa0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: 'Submit Form'
+    show_preview: false
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+id: global_contact_form
+label: 'Global Contact Form'
+recipients:
+  - admin@mail.com
+reply: ''
+weight: 0
+message: 'Thank you for reaching out to us. We will be in touch shortly. '
+redirect: ''

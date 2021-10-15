@@ -1,0 +1,93 @@
+uuid: ee4df1b6-e417-48e1-b05d-76a3958809fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.underwear
+    - field.field.commerce_product_variation.underwear.attribute_product_size_panty
+    - field.field.commerce_product_variation.underwear.field_buy_now_link_lazada
+    - field.field.commerce_product_variation.underwear.field_buy_now_link_shopee
+    - field.field.commerce_product_variation.underwear.field_pv_quantity_label
+  module:
+    - commerce_price
+    - link
+id: commerce_product_variation.underwear.default
+targetEntityType: commerce_product_variation
+bundle: underwear
+mode: default
+content:
+  attribute_product_size_panty:
+    type: options_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_buy_now_link_lazada:
+    weight: 93
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_buy_now_link_shopee:
+    weight: 92
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_pv_quantity_label:
+    weight: 91
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  list_price:
+    type: commerce_list_price
+    weight: -1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sku:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 90
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

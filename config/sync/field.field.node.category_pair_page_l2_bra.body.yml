@@ -1,0 +1,23 @@
+uuid: 565d63f6-8bff-4695-b051-eb0e54b7eb96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.category_pair_page_l2_bra
+  module:
+    - text
+id: node.category_pair_page_l2_bra.body
+field_name: body
+entity_type: node
+bundle: category_pair_page_l2_bra
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

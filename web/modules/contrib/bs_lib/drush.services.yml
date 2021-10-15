@@ -1,0 +1,6 @@
+services:
+  bs_lib.commands:
+    class: \Drupal\bs_lib\Commands\BsLibCommands
+    arguments: ['@theme_handler']
+    tags:
+      - { name: drush.command }

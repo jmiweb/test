@@ -1,0 +1,51 @@
+# Theme options.
+
+sass:
+  injectVariables:
+    variables:
+      # Colors
+
+      # Named colors.
+      gray-light: '#868e96'
+      blue:           '#007bff'
+
+      # Theme colors override.
+      primary:    '$blue'
+      secondary:  '$gray-light'
+
+      theme-colors:
+        primary:    '$primary'
+        secondary:  '$secondary'
+
+
+      # Typography
+
+      base-fonts:
+        font-family-base: 'times'
+      #hero-font-family: ''
+
+
+      # Options
+
+      enable-box-shadow:         true
+      enable-box-shadow-hover:   true
+      enable-raise-bottom-line:  true
+
+
+      # Layout
+
+      #brand-logo-width:   200px
+      #grid-gutter-width:  24px
+      #spacer:             0.75rem
+
+
+      # Components
+
+      #header-bg:    ''
+      #header-color: ''
+      #header-border-color: ''
+
+      teaser-primary:
+        bg:   '$primary'
+      teaser-secondary:
+        bg:   '$secondary'

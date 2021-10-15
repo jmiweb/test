@@ -1,0 +1,10 @@
+uuid: 9bfb6f93-808a-4d03-baaa-36a9df00cdcc
+langcode: en
+status: true
+dependencies: {  }
+id: category_group_underwear_by_fit
+label: 'Category Group (Underwear - by fit)'
+icon_uuid: null
+icon_default: null
+description: 'Content for Level1 (L1) page'
+behavior_plugins: {  }

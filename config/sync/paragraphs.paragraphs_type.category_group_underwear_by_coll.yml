@@ -1,0 +1,10 @@
+uuid: 0aa0b3b9-1626-4285-ad61-f36ba886ea78
+langcode: en
+status: true
+dependencies: {  }
+id: category_group_underwear_by_coll
+label: 'Category Group (Underwear - by collection)'
+icon_uuid: null
+icon_default: null
+description: 'Content for Level1 (L1) page'
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 75ba70ef-6aa9-4a6a-bc49-cbfcc41b6fd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.bra
+    - field.storage.commerce_product_variation.field_bra_packaging
+  module:
+    - options
+id: commerce_product_variation.bra.field_bra_packaging
+field_name: field_bra_packaging
+entity_type: commerce_product_variation
+bundle: bra
+label: 'Bra Packaging'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

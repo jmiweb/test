@@ -1,0 +1,122 @@
+uuid: a8073b04-cc9f-4d84-a0bb-a02bdc9b86ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.footer_content_links.field_facebook_page_url
+    - field.field.site_setting_entity.footer_content_links.field_instagram_page_url
+    - field.field.site_setting_entity.footer_content_links.field_lazada_url
+    - field.field.site_setting_entity.footer_content_links.field_shopee_url
+    - field.field.site_setting_entity.footer_content_links.field_shopping_links_headline
+    - field.field.site_setting_entity.footer_content_links.field_social_media_headline
+    - field.field.site_setting_entity.footer_content_links.field_twitter_page_url
+    - site_settings.site_setting_entity_type.footer_content_links
+  module:
+    - link
+    - user
+id: site_setting_entity.footer_content_links.default
+targetEntityType: site_setting_entity
+bundle: footer_content_links
+mode: default
+content:
+  field_facebook_page_url:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_instagram_page_url:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_lazada_url:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_shopee_url:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_shopping_links_headline:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_social_media_headline:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_twitter_page_url:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  fieldset:
+    label: hidden
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    label: hidden
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

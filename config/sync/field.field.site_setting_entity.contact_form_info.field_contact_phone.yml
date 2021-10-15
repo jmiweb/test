@@ -1,0 +1,21 @@
+uuid: 541b5f61-3008-4509-b743-8a2cd64caf72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_contact_phone
+    - site_settings.site_setting_entity_type.contact_form_info
+  module:
+    - telephone
+id: site_setting_entity.contact_form_info.field_contact_phone
+field_name: field_contact_phone
+entity_type: site_setting_entity
+bundle: contact_form_info
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -1,0 +1,91 @@
+uuid: 4c29527d-98e4-4877-9f04-36326177a140
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_banner.field_color_palette
+    - field.field.paragraph.text_banner.field_tb_headline
+    - field.field.paragraph.text_banner.field_tb_include_scroll_icon
+    - field.field.paragraph.text_banner.field_tb_short_caption
+    - field.field.paragraph.text_banner.field_tb_small_heading
+    - paragraphs.paragraphs_type.text_banner
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_text_fields:
+      children:
+        - field_tb_small_heading
+        - field_tb_headline
+        - field_tb_short_caption
+      parent_name: ''
+      weight: 0
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Text Fields'
+    group_rendering_options:
+      children:
+        - field_color_palette
+        - field_tb_include_scroll_icon
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Rendering Options'
+id: paragraph.text_banner.default
+targetEntityType: paragraph
+bundle: text_banner
+mode: default
+content:
+  field_color_palette:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tb_headline:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tb_include_scroll_icon:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_tb_short_caption:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tb_small_heading:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

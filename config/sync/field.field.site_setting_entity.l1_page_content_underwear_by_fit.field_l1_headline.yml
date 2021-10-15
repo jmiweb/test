@@ -1,0 +1,21 @@
+uuid: b88036fe-be84-40fe-addd-1a944b3fc4b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_l1_headline
+    - site_settings.site_setting_entity_type.l1_page_content_underwear_by_fit
+id: site_setting_entity.l1_page_content_underwear_by_fit.field_l1_headline
+field_name: field_l1_headline
+entity_type: site_setting_entity
+bundle: l1_page_content_underwear_by_fit
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Find Your Match'
+default_value_callback: ''
+settings: {  }
+field_type: string

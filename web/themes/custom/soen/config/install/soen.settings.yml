@@ -1,0 +1,30 @@
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: themes/custom/soen/logo.svg
+  use_default: false
+favicon:
+  mimetype: image/x-icon
+  path: themes/custom/soen/favicon.ico
+  use_default: false
+bs_base:
+  maintenance_image:
+    path: themes/contrib/bs_base/images/maintenance.svg
+bs_bootstrap:
+  custom_forms: true
+  language_block:
+    title: label
+    type: links
+  layout:
+    header_top_container_type: fixed
+    navbar_container_type: fixed
+  logo_svg_inline: true
+  navbar:
+    onhover: true
+  navbar_offcanvas:
+    type: push
+    position: right
+  navbar_type: second-level-horizontal

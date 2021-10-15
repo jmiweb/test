@@ -1,0 +1,306 @@
+.field--name-field-product-page-fit-image,
+.field--name-field-product-page-fit-image img {
+    margin: 0;
+}
+
+.product--full-image {
+    img:not(.zoomImg) {
+        opacity: 0;
+        animation: pop 0.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
+    }
+    
+    .field--name-field-prod-design-img-main {
+        display: none;
+        margin: 0;
+    
+        &.active {
+            display: block;
+        }
+    }
+    
+    .zoomImg:hover { 
+        cursor: move; /* fallback if grab cursor is unsupported */
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+    }
+    
+    .zoomImg:active {
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
+    }
+
+    @include media-breakpoint-up(lg) {
+        min-height: 80vh;
+    }
+}
+
+.product--details {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    .item-list {
+        margin: 0;
+        padding: 0;
+
+        .list-group-item {
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 12px;
+            border: 0;
+            color: $brand-primary;
+        }
+    }
+}
+
+.product--variant-pager {
+    position: absolute;
+    bottom: -0.25rem;
+    left: 50%;
+    margin-left: -1.25rem;
+    border: 0;
+    overflow: hidden;
+    color: transparent;
+    z-index: 3;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: $brand-primary;
+    background-image: url('../images/chevron.svg');
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: $black;
+    }
+
+    @include media-breakpoint-up(sm) {
+        margin: 0;
+        top: 20%;
+        right: 0;
+        left: auto;
+    }
+
+    @include media-breakpoint-up(md) {
+        top: 33%;
+    }
+}
+
+.product--variant-nav {
+    .nav-link {
+        border: 1px solid $brand-primary;
+        transition: background 0.3s;
+        border-width: 2px 1px;
+
+        &.active {
+            background: $brand-primary;
+            color: $white;
+        }
+    }
+
+    .nav-item {
+        &:first-child .nav-link {
+            border-left-width: 2px;
+        }
+    
+        &:last-child .nav-link {
+            border-right-width: 2px;
+        }
+    }
+
+}
+
+.product--back-link {
+    text-transform: uppercase;
+}
+
+.product--item-code {
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+.field--name-field-product-prefix {
+    display: inline-block;
+}
+
+.field--name-field-product-page-display-label {
+    color: $brand-primary;
+    font-size: 2.5rem;
+    font-family: $font-family-temeraire;
+    font-style: italic;
+    margin: 0.5em 0;
+}
+
+.field--name-field-product-page-price-label {
+    color: $brand-primary;
+    padding-top: 1rem;
+
+    span {
+        color: $grey-medium-2;
+        font-size: 0.875rem;
+    }
+}
+
+.field--name-field-product-page-features {
+    margin: 1rem 0;
+}
+
+.product--size-chart {
+    color: $brand-primary;
+    text-transform: uppercase;
+}
+
+.size-chart-modal {
+    .field--name-field-product-page-size-chart-fi, img {
+        margin: 0;
+    }
+}
+
+.field--name-field-product-page-design-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & > .field__item {
+        width: 20%;
+        height: auto;
+        margin: 0 0.5rem 0.5rem 0;
+        border: 1px solid transparent;
+        transition: border 0.3s;
+
+        & > * {
+            cursor: pointer;
+        }
+
+        &.active {
+            border: 1px solid $brand-primary;
+        }
+    }
+
+    .field--name-field-prod-design-img-main {
+        display: none;
+    }
+
+    .field--name-field-prod-design-img-thumbnail,
+    .field--name-field-prod-design-img-thumbnail img {
+        margin: 0;
+    }
+}
+
+.product-thumbs--heading {
+    text-transform: uppercase;
+}
+
+.variation {
+    &-labels {
+        .field--type-link {
+            display: none;
+        }
+
+        .field--name-variations {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        
+            & > .field__item {
+                margin: 0 0.875rem 0.5rem 0;
+                padding: 0.25rem 0.5rem;
+                border: 1px solid $brand-primary;
+                cursor: pointer;
+                color: $brand-primary;
+                transition: background-color 0.3s;
+
+                &.active {
+                    background-color: $brand-primary;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &-links {
+        .field--type-string,
+        .field__item .field--type-link {
+            display: none;
+            margin: 0 1rem 1rem 0;
+        }
+
+        .field__item > div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .field__item.active div > .field--type-link {
+            display: block;
+        }
+    }
+}
+
+.field--name-field-buy-now-link {
+    &-shopee,
+    &-lazada {
+        a {
+            position: relative;
+            display: block;
+            width: 174px;
+            height: 36px;
+            background: linear-gradient(90deg, rgba(253,74,92,1) 0%, rgba(255,132,132,1) 100%);
+            text-indent: -9999px;
+            box-shadow: 0 0 1rem $grey-medium;
+
+            &:before {
+                content: "BUY NOW";
+                display: block;
+                position: absolute;
+                left: 15px;
+                top: 6px;
+                color: white;
+                text-indent: 0;
+            }
+        }
+    }
+
+    &-shopee a:after {
+        content: url(../images/shopee_w.png);
+        display: block;
+        position: absolute;
+        left: 65px;
+        top: -3px;
+        text-indent: 0;
+        transform: scale(0.5);
+    }
+
+    &-lazada a:after {
+        content: url(../images/lazada_w.png);
+        display: block;
+        position: absolute;
+        left: 65px;
+        top: -1px;
+        text-indent: 0;
+        transform: scale(0.5);
+    }
+}
+
+// L2 Specific
+.views-field-field-product-teaser-image {
+    display: none;
+}
+
+.views-field-field-product-prefix {
+    margin: 2em 0;
+
+    h2 {
+        color: $brand-primary;
+        margin: 0;
+    }
+}
+
+.views-field-field-product-teaser-description, .views-field-field-product-teaser-features {
+    margin: 1rem 0;
+    font-size: 1.15rem;
+}

@@ -1,0 +1,57 @@
+uuid: c5a9267a-ec04-4e3a-9765-c4fb13cecd10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.bra_style.field_listing_splash_image
+    - taxonomy.vocabulary.bra_style
+  module:
+    - media_library
+    - path
+id: taxonomy_term.bra_style.default
+targetEntityType: taxonomy_term
+bundle: bra_style
+mode: default
+content:
+  field_listing_splash_image:
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true

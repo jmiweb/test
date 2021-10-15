@@ -1,0 +1,5 @@
+change_pwd_page.change_password:
+  title: 'Change password'
+  weight: -9
+  route_name: change_pwd_page.change_password
+  menu_name: account

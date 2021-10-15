@@ -1,0 +1,16 @@
+uuid: 9859d5fb-71d8-4069-bef2-008048f6eb8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.product_size_panty
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: commerce_product_attribute_value.product_size_panty
+target_entity_type_id: commerce_product_attribute_value
+target_bundle: product_size_panty
+default_langcode: site_default
+language_alterable: false

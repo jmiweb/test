@@ -1,0 +1,253 @@
+body {
+  background-color: blue;
+}
+
+.offcanvas {
+  display: none;
+}
+
+.offcanvas.in {
+  display: block;
+}
+
+.canvas-sliding {
+  transition: top 0.35s, left 0.35s, bottom 0.35s, right 0.35s;
+}
+
+.offcanvas-clone {
+  height: 0px !important;
+  width: 0px !important;
+  overflow: hidden !important;
+  border: none !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  position: absolute !important;
+  top: auto !important;
+  left: auto !important;
+  bottom: 0px !important;
+  right: 0px !important;
+  opacity: 0 !important;
+}
+
+.modal-backdrop.allow-navbar {
+  z-index: 1029;
+}
+
+.limit-backdrop {
+  overflow: hidden !important;
+}
+
+.limit-backdrop .modal-backdrop {
+  position: absolute;
+}
+
+.offcanvas-close-link {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none !important;
+}
+
+.navmenu {
+  width: 300px;
+  max-width: 99%;
+  height: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+}
+
+.lockIphone {
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
+  -webkit-overflow-scrolling: auto;
+}
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.navmenu-fixed-left,
+.navmenu-fixed-right,
+.navbar-offcanvas {
+  border-radius: 0;
+}
+
+.navmenu-fixed-left,
+.navbar-offcanvas.navmenu-fixed-left {
+  left: 0;
+  right: auto;
+  border-width: 0 1px 0 0;
+}
+
+.navmenu-fixed-right,
+.navbar-offcanvas {
+  left: auto;
+  right: 0;
+  border-width: 0 0 0 1px;
+}
+
+.navmenu.in {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.navmenu.in a:not([class]), .navmenu.in a.ext {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.navmenu.in a:not([class]):hover, .navmenu.in a:not([class]):focus, .navmenu.in a.ext:hover, .navmenu.in a.ext:focus {
+  color: #006fe6;
+  text-decoration: underline;
+}
+
+.navmenu.in a:not([class]).is-active, .navmenu.in a:not([class]).active, .navmenu.in a.ext.is-active, .navmenu.in a.ext.active {
+  color: #006fe6;
+  text-decoration: underline;
+}
+
+.navmenu.in a.nav-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.navmenu.in a.nav-link:hover, .navmenu.in a.nav-link:focus {
+  color: #006fe6;
+  text-decoration: none;
+}
+
+.navmenu.in a.nav-link.is-active, .navmenu.in a.nav-link.active {
+  color: #006fe6;
+  text-decoration: none;
+}
+
+.navmenu.in a.nav-link:hover, .navmenu.in a.nav-link:focus {
+  text-decoration: none;
+}
+
+.navmenu.in a.nav-link:hover::after, .navmenu.in a.nav-link:focus::after {
+  background-color: #006fe6;
+}
+
+.navmenu.in a.nav-link.is-active, .navmenu.in a.nav-link.active {
+  color: #006fe6;
+  text-decoration: none;
+}
+
+.navmenu.in a.nav-link.is-active::after, .navmenu.in a.nav-link.active::after {
+  background-color: #006fe6;
+}
+
+.navmenu.in .btn {
+  background-color: transparent;
+}
+
+.navmenu.in .navbar-nav .dropdown > a:hover .caret,
+.navmenu.in .navbar-nav .dropdown > a:focus .caret {
+  border-top-color: #006fe6;
+  border-bottom-color: #006fe6;
+}
+
+.navmenu.in .navbar-nav .open > a, .navmenu.in .navbar-nav .open > a:hover, .navmenu.in .navbar-nav .open > a:focus {
+  background-color: transparent;
+  color: #006fe6;
+}
+
+.navmenu.in .navbar-nav .open > a .caret, .navmenu.in .navbar-nav .open > a:hover .caret, .navmenu.in .navbar-nav .open > a:focus .caret {
+  border-top-color: #006fe6;
+  border-bottom-color: #006fe6;
+}
+
+.navmenu.in .navbar-nav .dropdown > a .caret {
+  border-top-color: #007bff;
+  border-bottom-color: #007bff;
+}
+
+.navmenu.in .navbar-nav .dropdown-menu {
+  background-color: transparent;
+}
+
+.navmenu.in .navbar-nav .dropdown-menu > .divider {
+  background: #e9ecef;
+}
+
+.navmenu.in .navbar-nav .dropdown-menu > .active > a, .navmenu.in .navbar-nav .dropdown-menu > .active > a:hover, .navmenu.in .navbar-nav .dropdown-menu > .active > a:focus {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.navmenu.in .navbar-nav li > a:hover, .navmenu.in .navbar-nav li > a:focus {
+  background-color: transparent;
+}
+
+.navmenu.in .navbar-nav .active > a {
+  color: #006fe6;
+}
+
+.navmenu.in .navbar-nav .active > a, .navmenu.in .navbar-nav .active > a:hover, .navmenu.in .navbar-nav .active > a:focus {
+  background-color: transparent;
+}
+
+.navmenu.in .navbar-nav .active > a::after, .navmenu.in .navbar-nav .active > a:hover::after, .navmenu.in .navbar-nav .active > a:focus::after {
+  background-color: #006fe6;
+}
+
+.navmenu.in .nav-links .is-active > a {
+  color: #006fe6;
+}
+
+.navmenu.in .offcanvas-close-link {
+  display: block !important;
+}
+
+.navmenu-fixed-left {
+  right: auto !important;
+}
+
+.navmenu-fixed-right {
+  left: auto !important;
+}
+
+.lockIphone {
+  position: inherit;
+}
+
+body.canvas-sliding {
+  left: auto !important;
+}
+
+body.canvas-slid {
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar .offcanvas {
+    display: block;
+    width: auto;
+    border: none;
+  }
+  .navbar .navmenu-fixed-right {
+    position: initial;
+    overflow-y: visible;
+  }
+}
+
+@media (max-width: 767px) {
+  .navmenu-fixed-left,
+  .navmenu-fixed-right,
+  .navbar-offcanvas {
+    position: fixed;
+    z-index: 1030;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  .navmenu.in {
+    background: #e9ecef;
+  }
+  .navbar .navmenu {
+    padding-top: 1rem;
+  }
+}

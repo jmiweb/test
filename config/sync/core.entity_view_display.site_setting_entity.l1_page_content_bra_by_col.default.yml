@@ -1,0 +1,103 @@
+uuid: 9675550d-8701-4a88-b35d-d8f94128dac6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.l1_page_content_bra_by_col.field_default_sample_fit_image
+    - field.field.site_setting_entity.l1_page_content_bra_by_col.field_l1_category_content
+    - field.field.site_setting_entity.l1_page_content_bra_by_col.field_l1_default_option_help
+    - field.field.site_setting_entity.l1_page_content_bra_by_col.field_l1_headline
+    - field.field.site_setting_entity.l1_page_content_bra_by_col.field_l1_page_layout
+    - field.field.site_setting_entity.l1_page_content_bra_by_col.field_l1_page_title
+    - field.field.site_setting_entity.l1_page_content_bra_by_col.field_l1_sub_heading
+    - site_settings.site_setting_entity_type.l1_page_content_bra_by_col
+  module:
+    - entity_reference_revisions
+    - options
+    - user
+id: site_setting_entity.l1_page_content_bra_by_col.default
+targetEntityType: site_setting_entity
+bundle: l1_page_content_bra_by_col
+mode: default
+content:
+  field_default_sample_fit_image:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_l1_category_content:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_l1_default_option_help:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_l1_headline:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_l1_page_layout:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_l1_page_title:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_l1_sub_heading:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  fieldset:
+    label: hidden
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    label: hidden
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

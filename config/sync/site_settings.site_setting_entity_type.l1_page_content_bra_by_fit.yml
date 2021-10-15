@@ -1,0 +1,8 @@
+uuid: 3b1b45a9-c5c9-4e4b-ac71-0ee929039db8
+langcode: en
+status: true
+dependencies: {  }
+id: l1_page_content_bra_by_fit
+label: 'Bra Categories - By Fit Page'
+fieldset: 'Level One Page Content'
+multiple: false

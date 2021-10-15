@@ -1,0 +1,10 @@
+uuid: 517fe4b2-2a83-4bf0-a4cd-31ed715ae511
+langcode: en
+status: true
+dependencies: {  }
+id: category_group_bra_by_collection
+label: 'Category Group (Bra - by collection)'
+icon_uuid: null
+icon_default: null
+description: 'Content for Level1 (L1) page'
+behavior_plugins: {  }

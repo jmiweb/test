@@ -1,0 +1,10 @@
+uuid: ad7d1ac1-883c-4660-8147-1718b97874fb
+langcode: en
+status: true
+dependencies: {  }
+id: underwear
+label: Underwear
+orderItemType: null
+generateTitle: null
+traits: {  }
+locked: false

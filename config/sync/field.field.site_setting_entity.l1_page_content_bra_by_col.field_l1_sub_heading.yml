@@ -1,0 +1,21 @@
+uuid: f06714d4-426f-4d65-a2c2-97a9d81dc148
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_l1_sub_heading
+    - site_settings.site_setting_entity_type.l1_page_content_bra_by_col
+id: site_setting_entity.l1_page_content_bra_by_col.field_l1_sub_heading
+field_name: field_l1_sub_heading
+entity_type: site_setting_entity
+bundle: l1_page_content_bra_by_col
+label: Sub-heading
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 'Find the perfect style for you with our fit guide'
+default_value_callback: ''
+settings: {  }
+field_type: string

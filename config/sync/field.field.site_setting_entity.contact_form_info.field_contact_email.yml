@@ -1,0 +1,19 @@
+uuid: fb39a8e4-a870-4149-91ee-a7d1a3475f71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_contact_email
+    - site_settings.site_setting_entity_type.contact_form_info
+id: site_setting_entity.contact_form_info.field_contact_email
+field_name: field_contact_email
+entity_type: site_setting_entity
+bundle: contact_form_info
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

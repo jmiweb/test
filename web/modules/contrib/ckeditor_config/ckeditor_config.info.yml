@@ -1,0 +1,9 @@
+name: CKEditor custom config
+type: module
+description: 'Provides administration form for CKEditor custom configuration.'
+package: CKEditor
+core: 8.x
+configure: ckeditor_config.config_form
+
+dependencies:
+  - drupal:ckeditor

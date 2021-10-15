@@ -1,0 +1,28 @@
+uuid: b8ac6c59-49e3-493b-8e16-3d247a3e3737
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_listing_splash_image
+    - media.type.image_upload
+    - taxonomy.vocabulary.bra_collection
+id: taxonomy_term.bra_collection.field_listing_splash_image
+field_name: field_listing_splash_image
+entity_type: taxonomy_term
+bundle: bra_collection
+label: 'Listing Splash Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image_upload: image_upload
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,12 @@
+// Main base file which is responsible of loading all variables in correct
+// order and all mixin files we are using.
+//
+// NOTE that this order is not fixed, feel free to change it you see it fit for
+// your custom theme.
+
+// Theme custom variables and overrides.
+@import "variables/soen";
+@import "components/paragraphs/text-banner";
+
+// Load variables and other init code from all parent themes.
+@import "bs_bootstrap/sass/init";

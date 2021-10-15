@@ -1,0 +1,67 @@
+uuid: 32d15ccf-497a-4293-a6d4-d6734bb93a9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_l1_category_content
+    - paragraphs.paragraphs_type.category_group_bra_by_collection
+    - site_settings.site_setting_entity_type.l1_page_content_bra_by_col
+  module:
+    - entity_reference_revisions
+id: site_setting_entity.l1_page_content_bra_by_col.field_l1_category_content
+field_name: field_l1_category_content
+entity_type: site_setting_entity
+bundle: l1_page_content_bra_by_col
+label: Options
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      category_group_bra_by_collection: category_group_bra_by_collection
+    target_bundles_drag_drop:
+      category_group_bra_by_collection:
+        enabled: true
+        weight: 14
+      category_group_bra_by_fit_:
+        weight: 15
+        enabled: false
+      category_group_underwear_by_coll:
+        weight: 16
+        enabled: false
+      category_group_underwear_by_fit:
+        weight: 17
+        enabled: false
+      contact_form:
+        weight: 18
+        enabled: false
+      faq_item:
+        weight: 19
+        enabled: false
+      full_faq_listing:
+        weight: 20
+        enabled: false
+      image:
+        weight: 21
+        enabled: false
+      product_design_images:
+        weight: 22
+        enabled: false
+      promtions_cards:
+        weight: 23
+        enabled: false
+      simple_text:
+        weight: 24
+        enabled: false
+      text_banner:
+        weight: 25
+        enabled: false
+      text_with_image:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

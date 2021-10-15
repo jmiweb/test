@@ -1,0 +1,16 @@
+<div class="col-12">
+  <ul class="nav product--variant-nav" id="product-tab" role="tablist">
+    {% for row in rows %}
+      <li class="nav-item">
+        <a class="nav-link" id="product-{{ row.content['#row']._entity.field_product_prefix.value|clean_class }}-tab" data-toggle="tab" href="#product-{{ row.content['#row']._entity.field_product_prefix.value|clean_class }}" role="tab" aria-controls="product-{{ row.content['#row']._entity.field_product_prefix.value|clean_class }}">{{ row.content['#row']._entity.field_product_prefix.value }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="tab-content col-12" id="product-tab-content">
+  {% for row in rows %}
+    <div class="tab-pane" id="product-{{ row.content['#row']._entity.field_product_prefix.value|clean_class }}" role="tabpanel" aria-labelledby="product-{{ row.content['#row']._entity.field_product_prefix.value|clean_class }}-tab">
+      {{ row.content }}
+    </div>
+  {% endfor %}
+</div>

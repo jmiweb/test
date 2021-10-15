@@ -1,0 +1,19 @@
+uuid: 10a463c5-e94b-4874-af3a-c4dd39f0601a
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - site_settings
+id: site_setting_entity.field_shopee_url
+field_name: field_shopee_url
+entity_type: site_setting_entity
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

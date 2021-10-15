@@ -1,0 +1,3 @@
+ckeditor config:
+  title: 'Access to CKEditor Custom Configuration form.'
+  restrict access: true

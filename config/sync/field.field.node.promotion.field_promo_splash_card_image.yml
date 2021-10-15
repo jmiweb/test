@@ -1,0 +1,29 @@
+uuid: ec19c9e9-f13c-4f01-8059-2249d03fd677
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promo_splash_card_image
+    - media.type.image_upload
+    - node.type.promotion
+id: node.promotion.field_promo_splash_card_image
+field_name: field_promo_splash_card_image
+entity_type: node
+bundle: promotion
+label: 'Content Page Reference Card Image'
+description: 'Upload an image that will be displayed when this Promotion is referenced on a Content Page. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image_upload: image_upload
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

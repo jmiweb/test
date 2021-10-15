@@ -1,0 +1,27 @@
+uuid: 81f427a0-58a2-419d-8742-418b7ac4eccb
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - site_settings
+id: site_setting_entity.field_l1_page_layout
+field_name: field_l1_page_layout
+entity_type: site_setting_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 3x2
+      label: 'Top: Three, Bottom: Two'
+    -
+      value: 2x3
+      label: 'Top: Two, Bottom: Three'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

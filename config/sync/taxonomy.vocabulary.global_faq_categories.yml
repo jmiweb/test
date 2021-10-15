@@ -1,0 +1,8 @@
+uuid: 78279d30-7731-4008-81ab-78e52e9604f5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Global FAQ Categories'
+vid: global_faq_categories
+description: 'Group FAQ items by category'
+weight: 0

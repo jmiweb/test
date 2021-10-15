@@ -1,0 +1,61 @@
+uuid: 62006e4c-ea12-433c-a1ef-06458efbcbf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_banner.field_color_palette
+    - field.field.paragraph.text_banner.field_tb_headline
+    - field.field.paragraph.text_banner.field_tb_include_scroll_icon
+    - field.field.paragraph.text_banner.field_tb_short_caption
+    - field.field.paragraph.text_banner.field_tb_small_heading
+    - paragraphs.paragraphs_type.text_banner
+  module:
+    - options
+id: paragraph.text_banner.default
+targetEntityType: paragraph
+bundle: text_banner
+mode: default
+content:
+  field_color_palette:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_tb_headline:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tb_include_scroll_icon:
+    weight: 4
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_tb_short_caption:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tb_small_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

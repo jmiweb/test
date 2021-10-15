@@ -1,0 +1,111 @@
+// FAQ Listing
+
+.view-faq-listing .view-filters {
+    margin: 0.65rem 0;
+
+    @include media-breakpoint-up(lg) {
+        margin: 1.5rem 0;
+    }
+
+    .fieldset-legend {
+        color: $brand-primary;
+        line-height: 1.25;
+    }
+
+    .js-form-item {
+        font-size: 20px;
+        padding: 0;
+        color: $grey-medium-2;
+
+        label:before {
+            display: none;
+        }
+
+        input[checked="checked"] + label {
+            color: $black;
+            text-decoration: underline;
+        }
+    }
+}
+
+.view-faq-listing .views-row,
+.paragraph--type--faq-item ul > .field__item {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid $grey-medium;
+
+    @include media-breakpoint-up(lg) {
+        padding: 1.5rem 0;
+    }
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+
+.faq-item {
+    &--question {
+        border: 0;
+        background: transparent;
+        font-size: 20px;
+        font-weight: bold;
+        width: 100%;
+        color: $brand-primary;
+        text-align: left;
+        padding: 0.25rem 0;
+
+        h2 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0;
+            justify-content: space-between;
+
+            div {
+                width: calc(100% - 20px);
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .icon:after {
+            display: block;
+            content: '+';
+            color: $brand-primary;
+            font-size: 2rem;
+        }
+
+        &[aria-expanded="true"] {
+
+            .icon:after {
+                content: '-';
+                line-height: 1.3;
+            }
+        }
+    }
+
+    &--answer {
+        display: none;
+        font-size: 18px;
+        color: $grey-medium-2;
+        line-height: 1.5;
+        padding: 1rem 0 0;
+    }
+}
+
+.faq--taxonomy-heading {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: $font-family-basic;
+    margin: 16px 0 0;
+    padding: 0 1rem;
+    color: $grey-medium-2;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 26px;
+        margin: 30px 0 0;
+        padding: 0;
+    }
+}

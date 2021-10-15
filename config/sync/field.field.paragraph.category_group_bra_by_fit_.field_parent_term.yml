@@ -1,0 +1,29 @@
+uuid: 48c6a93f-666c-45dd-8430-189e85f385d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_parent_term
+    - paragraphs.paragraphs_type.category_group_bra_by_fit_
+    - taxonomy.vocabulary.bra_style
+id: paragraph.category_group_bra_by_fit_.field_parent_term
+field_name: field_parent_term
+entity_type: paragraph
+bundle: category_group_bra_by_fit_
+label: 'Parent Term'
+description: 'Select a category that will represent the parent term for the grouping. '
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bra_style: bra_style
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

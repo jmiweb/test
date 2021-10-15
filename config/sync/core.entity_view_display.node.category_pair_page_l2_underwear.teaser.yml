@@ -1,0 +1,36 @@
+uuid: d7baaae7-c303-40fb-b27e-b2e8addb20df
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.category_pair_page_l2_underwear.body
+    - field.field.node.category_pair_page_l2_underwear.field_prod_collection_ref
+    - field.field.node.category_pair_page_l2_underwear.field_prod_style_ref
+    - node.type.category_pair_page_l2_underwear
+  module:
+    - text
+    - user
+id: node.category_pair_page_l2_underwear.teaser
+targetEntityType: node
+bundle: category_pair_page_l2_underwear
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_prod_collection_ref: true
+  field_prod_style_ref: true
+  langcode: true
+  search_api_excerpt: true

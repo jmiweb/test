@@ -1,0 +1,22 @@
+uuid: 75a5f77d-b516-41ff-b310-fbd0db3df6a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.category_pair_page_l2_underwear
+id: node.category_pair_page_l2_underwear.promote
+field_name: promote
+entity_type: node
+bundle: category_pair_page_l2_underwear
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

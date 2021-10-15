@@ -1,0 +1,20 @@
+body {
+  background-color: blue;
+}
+
+img[data-entity-type] {
+  max-width: 100%;
+  height: auto;
+}
+
+.embedded-entity.align-left {
+  margin-right: 1rem;
+}
+
+.embedded-entity.align-center {
+  text-align: center;
+}
+
+.embedded-entity.align-right {
+  margin-left: 1rem;
+}

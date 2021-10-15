@@ -1,0 +1,18 @@
+// Promotions
+.paragraph--type--promtions-cards {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .field--name-field-promotion-title-heading {
+        color: $brand-primary;
+    }
+
+    .field--type-image {
+        margin: 0;
+    }
+}

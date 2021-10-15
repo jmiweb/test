@@ -1,0 +1,17 @@
+.paragraph--type--image {
+    .field--name-field-image {
+        margin: 0;
+    }
+
+    .field--name-field-media-image {
+        margin: 0;
+        float: none;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+    }
+}

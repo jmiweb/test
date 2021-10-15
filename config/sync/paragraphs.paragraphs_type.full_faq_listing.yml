@@ -1,0 +1,10 @@
+uuid: db07a90b-3f34-4d6f-9f3c-c4162d86157f
+langcode: en
+status: true
+dependencies: {  }
+id: full_faq_listing
+label: 'Full FAQ Listing'
+icon_uuid: null
+icon_default: null
+description: 'Display all the FAQs of the site, grouped by FAQ Category '
+behavior_plugins: {  }

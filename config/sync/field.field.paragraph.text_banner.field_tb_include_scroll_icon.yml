@@ -1,0 +1,23 @@
+uuid: f7ae7d9a-9c50-419e-a399-9078ae6f6c39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tb_include_scroll_icon
+    - paragraphs.paragraphs_type.text_banner
+id: paragraph.text_banner.field_tb_include_scroll_icon
+field_name: field_tb_include_scroll_icon
+entity_type: paragraph
+bundle: text_banner
+label: 'Include Scroll Icon'
+description: 'This will place a stylized icon after the text fields to encourage users to scroll to the next component'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

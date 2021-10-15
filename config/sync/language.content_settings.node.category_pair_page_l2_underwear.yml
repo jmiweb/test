@@ -1,0 +1,16 @@
+uuid: aa4d2deb-eb10-4949-8b61-a19d9fe6f253
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.category_pair_page_l2_underwear
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.category_pair_page_l2_underwear
+target_entity_type_id: node
+target_bundle: category_pair_page_l2_underwear
+default_langcode: site_default
+language_alterable: false

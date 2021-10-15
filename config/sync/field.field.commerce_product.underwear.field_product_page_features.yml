@@ -1,0 +1,19 @@
+uuid: 7d5906cd-ba7e-4e9e-89b8-47f88c2ca894
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.underwear
+    - field.storage.commerce_product.field_product_page_features
+id: commerce_product.underwear.field_product_page_features
+field_name: field_product_page_features
+entity_type: commerce_product
+bundle: underwear
+label: 'Product Features'
+description: 'Add a product feature per line. '
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

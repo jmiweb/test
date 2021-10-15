@@ -1,0 +1,24 @@
+body {
+  background-color: blue;
+}
+
+@media (min-width: 768px) {
+  .maintenance--image .maintenance__text {
+    -webkit-flex-basis: 60%;
+        -ms-flex-preferred-size: 60%;
+            flex-basis: 60%;
+    max-width: 60%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .maintenance--image .maintenance__image {
+    -webkit-flex-basis: 40%;
+        -ms-flex-preferred-size: 40%;
+            flex-basis: 40%;
+    max-width: 40%;
+  }
+}

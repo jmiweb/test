@@ -1,0 +1,26 @@
+uuid: 49899a36-1d55-4b21-b736-fb8e68935850
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.global_contact_form
+    - field.storage.paragraph.field_contact_form_embed
+    - paragraphs.paragraphs_type.contact_form
+id: paragraph.contact_form.field_contact_form_embed
+field_name: field_contact_form_embed
+entity_type: paragraph
+bundle: contact_form
+label: 'Select Form'
+description: 'Select which form to embed. '
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 70376739-d945-4fdc-85b7-83027b10aa0a
+default_value_callback: ''
+settings:
+  handler: 'default:contact_form'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

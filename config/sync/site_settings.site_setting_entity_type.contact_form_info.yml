@@ -1,0 +1,8 @@
+uuid: cdd586f3-5755-408d-a1ee-f79a94f854f4
+langcode: en
+status: true
+dependencies: {  }
+id: contact_form_info
+label: 'Contact Form Info'
+fieldset: 'Contact Form Content'
+multiple: false

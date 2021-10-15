@@ -1,0 +1,159 @@
+uuid: 7820ecf1-5538-4944-a5a9-51d49efe3b9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.underwear
+    - field.field.commerce_product.underwear.field_product_page_design_images
+    - field.field.commerce_product.underwear.field_product_page_display_label
+    - field.field.commerce_product.underwear.field_product_page_features
+    - field.field.commerce_product.underwear.field_product_page_fit_image
+    - field.field.commerce_product.underwear.field_product_page_material_desc
+    - field.field.commerce_product.underwear.field_product_page_package_ops
+    - field.field.commerce_product.underwear.field_product_page_price_label
+    - field.field.commerce_product.underwear.field_product_page_size_chart_fi
+    - field.field.commerce_product.underwear.field_product_prefix
+    - field.field.commerce_product.underwear.field_product_teaser_description
+    - field.field.commerce_product.underwear.field_product_teaser_features
+    - field.field.commerce_product.underwear.field_product_teaser_image
+    - field.field.commerce_product.underwear.field_u_collection_ref
+    - field.field.commerce_product.underwear.field_u_style_ref
+  module:
+    - entity_reference_revisions
+    - text
+id: commerce_product.underwear.default
+targetEntityType: commerce_product
+bundle: underwear
+mode: default
+content:
+  field_product_page_design_images:
+    type: entity_reference_revisions_entity_view
+    weight: 13
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_product_page_display_label:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_product_page_features:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_product_page_fit_image:
+    type: entity_reference_entity_view
+    weight: 14
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_product_page_material_desc:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_product_page_package_ops:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_product_page_price_label:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_product_page_size_chart_fi:
+    type: entity_reference_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_product_prefix:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_product_teaser_description:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_product_teaser_features:
+    weight: 11
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_product_teaser_image:
+    type: entity_reference_entity_view
+    weight: 12
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_u_collection_ref:
+    weight: 8
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_u_style_ref:
+    weight: 9
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  variations:
+    type: entity_reference_entity_view
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      view_mode: product_display_page
+      link: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  title: true
+  uid: true

@@ -1,0 +1,13 @@
+base_url: ''
+secure_forms: false
+all_forms: false
+other_forms: ''
+form_user_login_form: false
+form_user_form: false
+form_user_register_form: false
+form_user_pass_reset: false
+form_user_pass: false
+_core:
+  default_config_hash: dnQK_fXC0n9MPQm65de4VfTTE1I5QMcept0WlMmJxmU
+form_contact_message_form: 0
+form_node_form: false

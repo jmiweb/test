@@ -1,0 +1,50 @@
+byfit.view:
+  path: '/products-by-fit/{node}'
+  defaults:
+    _controller: '\Drupal\node\Controller\NodeViewController::view'
+  requirements:
+    node: \d+
+    _entity_access: 'node.view'
+bycollection.view:
+  path: '/products-by-collection/{node}'
+  defaults:
+    _controller: '\Drupal\node\Controller\NodeViewController::view'
+  requirements:
+    node: \d+
+    _entity_access: 'node.view'
+
+# Underwear Pages
+soen_global.l1_underwear_by_fit:
+  path: '/underwear-by-fit/{default_category}'
+  defaults:
+    _controller: '\Drupal\soen_global\Controller\L1PagesController::underwear_by_fit'
+    _title_callback: '\Drupal\soen_global\Controller\L1PagesController::get_ubf_title'
+    default_category: 'default'
+  requirements:
+    _permission: 'access content'
+soen_global.l1_underwear_by_collection:
+  path: '/underwear-by-collection/{default_category}'
+  defaults:
+    _controller: '\Drupal\soen_global\Controller\L1PagesController::underwear_by_collection'
+    _title_callback: '\Drupal\soen_global\Controller\L1PagesController::get_ubc_title'
+    default_category: 'default'
+  requirements:
+    _permission: 'access content'
+
+# Bra Pages
+soen_global.l1_bra_by_fit:
+  path: '/bra-by-fit/{default_category}'
+  defaults:
+    _controller: '\Drupal\soen_global\Controller\L1PagesController::bra_by_fit'
+    _title_callback: '\Drupal\soen_global\Controller\L1PagesController::get_bbf_title'
+    default_category: 'default'    
+  requirements:
+    _permission: 'access content'
+soen_global.l1_bra_by_collection:
+  path: '/bra-by-collection/{default_category}'
+  defaults:
+    _controller: '\Drupal\soen_global\Controller\L1PagesController::bra_by_collection'
+    _title_callback: '\Drupal\soen_global\Controller\L1PagesController::get_bbc_title'
+    default_category: 'default'    
+  requirements:
+    _permission: 'access content'

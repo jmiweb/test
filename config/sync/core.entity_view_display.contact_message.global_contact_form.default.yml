@@ -1,0 +1,53 @@
+uuid: 50f6a592-9fcd-4472-961d-f01af190a5a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.global_contact_form
+    - field.field.contact_message.global_contact_form.field_contact_mobile_number
+id: contact_message.global_contact_form.default
+targetEntityType: contact_message
+bundle: global_contact_form
+mode: default
+content:
+  field_contact_mobile_number:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  mail:
+    weight: -2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  message:
+    type: string
+    weight: 0
+    label: above
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    weight: -3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  subject:
+    weight: -1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  langcode: true
+  search_api_excerpt: true

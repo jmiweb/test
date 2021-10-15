@@ -1,0 +1,19 @@
+uuid: 0b1f29cc-1206-48f5-a998-0fa5b8ae4245
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - site_settings
+id: site_setting_entity.field_lazada_url
+field_name: field_lazada_url
+entity_type: site_setting_entity
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

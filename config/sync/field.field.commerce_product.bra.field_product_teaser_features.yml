@@ -1,0 +1,19 @@
+uuid: 15fd97dc-4395-43d7-86e1-b9e970651ba6
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.bra
+    - field.storage.commerce_product.field_product_teaser_features
+id: commerce_product.bra.field_product_teaser_features
+field_name: field_product_teaser_features
+entity_type: commerce_product
+bundle: bra
+label: 'Teaser Features'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

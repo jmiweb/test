@@ -1,0 +1,20 @@
+***************
+*** 531,537 ****
+        $supported_types = array('entity_autocomplete', 'textfield');
+  
+        $filter_id = $filter->options['expose']['identifier'];
+-       if (in_array($filter_form[$filter_id]['#type'], $supported_types) || in_array($filter_form[$filter_id]['value']['#type'], $supported_types)) {
+          // Allow users to specify placeholder text.
+          $bef_options[$label]['more_options']['placeholder_text'] = [
+            '#type' => 'textfield',
+--- 531,540 ----
+        $supported_types = array('entity_autocomplete', 'textfield');
+  
+        $filter_id = $filter->options['expose']['identifier'];
++       if ((isset($filter_form[$filter_id]['#type']) &&
++           in_array($filter_form[$filter_id]['#type'], $supported_types)) ||
++         (isset($filter_form[$filter_id]['value']) &&
++           (in_array($filter_form[$filter_id]['value']['#type'], $supported_types)))) {
+          // Allow users to specify placeholder text.
+          $bef_options[$label]['more_options']['placeholder_text'] = [
+            '#type' => 'textfield',

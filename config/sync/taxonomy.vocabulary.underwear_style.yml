@@ -1,0 +1,8 @@
+uuid: 128ce1f3-7155-4937-a1df-47e4a6cd3e28
+langcode: en
+status: true
+dependencies: {  }
+name: 'Underwear Style / Fit'
+vid: underwear_style
+description: 'Categorizes Underwear products by Style'
+weight: 0

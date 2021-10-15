@@ -1,0 +1,18 @@
+uuid: 1891af40-8132-4d38-9ab5-e716140274cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Content Page'
+type: content_page
+description: 'Standard marketing page with static content. '
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,21 @@
+uuid: 3bbeeb28-2a0e-4789-bedb-64e2c4c0257c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_l1_headline
+    - site_settings.site_setting_entity_type.l1_page_content_bra_by_fit
+id: site_setting_entity.l1_page_content_bra_by_fit.field_l1_headline
+field_name: field_l1_headline
+entity_type: site_setting_entity
+bundle: l1_page_content_bra_by_fit
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 'Find Your Match'
+default_value_callback: ''
+settings: {  }
+field_type: string

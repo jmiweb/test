@@ -1,0 +1,55 @@
+uuid: 0bfe0629-d6cb-4ddc-a31c-5bd0758eda22
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.bra
+    - field.storage.commerce_product.field_product_page_design_images
+    - paragraphs.paragraphs_type.product_design_images
+  module:
+    - entity_reference_revisions
+id: commerce_product.bra.field_product_page_design_images
+field_name: field_product_page_design_images
+entity_type: commerce_product
+bundle: bra
+label: 'Design Images'
+description: 'These come in pairs. Upload a thumbnail that will serve as the selector for the main image. '
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      product_design_images: product_design_images
+    target_bundles_drag_drop:
+      contact_form:
+        weight: 10
+        enabled: false
+      faq_item:
+        weight: 11
+        enabled: false
+      full_faq_listing:
+        weight: 12
+        enabled: false
+      image:
+        weight: 13
+        enabled: false
+      product_design_images:
+        enabled: true
+        weight: 14
+      promtions_cards:
+        weight: 15
+        enabled: false
+      simple_text:
+        weight: 16
+        enabled: false
+      text_banner:
+        weight: 17
+        enabled: false
+      text_with_image:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,8 @@
+uuid: 4d1d0dfb-6b7f-4238-bb07-1fe84eadc654
+langcode: en
+status: true
+dependencies: {  }
+id: footer_content_links
+label: 'Footer Content Links'
+fieldset: 'Footer Content'
+multiple: false

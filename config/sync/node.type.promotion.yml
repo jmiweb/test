@@ -1,0 +1,18 @@
+uuid: 1260bdd1-3b1b-44e9-8b49-177ec496c66c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Promotion
+type: promotion
+description: 'Captures all the details related to a product promotion. '
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,4 @@
+l1-theming:
+  version: VERSION
+  js: 
+    js/l1-theming.js: {}

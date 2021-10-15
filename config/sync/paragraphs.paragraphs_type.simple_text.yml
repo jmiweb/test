@@ -1,0 +1,15 @@
+uuid: 00b3f071-6217-4348-a1be-772c89a7ae1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/soen_theme/assets/paragraph-type-icons/SimpleText.png
+id: simple_text
+label: 'Simple Text'
+icon_uuid: null
+icon_default: null
+description: 'Wysiwyg enabled rich text editor'
+behavior_plugins: {  }

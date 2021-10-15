@@ -1,0 +1,12 @@
+uuid: 7b3efc81-2489-4750-8959-bc717e88d5c9
+langcode: en
+status: true
+dependencies: {  }
+id: bra
+label: Bra
+description: ''
+variationType: bra
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

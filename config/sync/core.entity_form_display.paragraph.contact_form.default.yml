@@ -1,0 +1,21 @@
+uuid: 5ad8a6f8-ffbc-4c66-a783-1b32833a61ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_form.field_contact_form_embed
+    - paragraphs.paragraphs_type.contact_form
+id: paragraph.contact_form.default
+targetEntityType: paragraph
+bundle: contact_form
+mode: default
+content:
+  field_contact_form_embed:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

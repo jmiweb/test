@@ -1,0 +1,23 @@
+uuid: a4f12d05-b85a-47e6-8079-e5e51030a898
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.underwear
+    - field.storage.commerce_product_variation.field_buy_now_link_shopee
+  module:
+    - link
+id: commerce_product_variation.underwear.field_buy_now_link_shopee
+field_name: field_buy_now_link_shopee
+entity_type: commerce_product_variation
+bundle: underwear
+label: 'Buy Now Link - Shopee'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

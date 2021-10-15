@@ -1,0 +1,9 @@
+ckeditor_config.config_form:
+  path: '/admin/config/content/ckeditor-config'
+  defaults:
+    _form: '\Drupal\ckeditor_config\Form\CkeditorConfigForm'
+    _title: 'CKEditor custom configuration'
+  requirements:
+    _permission: 'ckeditor config'
+  options:
+    _admin_route: TRUE

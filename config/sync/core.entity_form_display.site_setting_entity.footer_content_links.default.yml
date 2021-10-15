@@ -1,0 +1,172 @@
+uuid: 367e3159-8c34-4d1e-86ea-79d8b7a366c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.footer_content_links.field_facebook_page_url
+    - field.field.site_setting_entity.footer_content_links.field_instagram_page_url
+    - field.field.site_setting_entity.footer_content_links.field_lazada_url
+    - field.field.site_setting_entity.footer_content_links.field_shopee_url
+    - field.field.site_setting_entity.footer_content_links.field_shopping_links_headline
+    - field.field.site_setting_entity.footer_content_links.field_social_media_headline
+    - field.field.site_setting_entity.footer_content_links.field_twitter_page_url
+    - site_settings.site_setting_entity_type.footer_content_links
+  module:
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_shopping_links:
+      children:
+        - field_shopping_links_headline
+        - group_shop_link
+      parent_name: ''
+      weight: 4
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Shopping Links'
+    group_social_media:
+      children:
+        - field_social_media_headline
+        - group_social_links
+      parent_name: ''
+      weight: 5
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Social Media'
+    group_shop_link:
+      children:
+        - field_shopee_url
+        - field_lazada_url
+      parent_name: group_shopping_links
+      weight: 22
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Links
+    group_social_links:
+      children:
+        - field_facebook_page_url
+        - field_instagram_page_url
+        - field_twitter_page_url
+      parent_name: group_social_media
+      weight: 10
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Links
+id: site_setting_entity.footer_content_links.default
+targetEntityType: site_setting_entity
+bundle: footer_content_links
+mode: default
+content:
+  field_facebook_page_url:
+    weight: 11
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_instagram_page_url:
+    weight: 12
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_lazada_url:
+    weight: 24
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_shopee_url:
+    weight: 23
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_shopping_links_headline:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_social_media_headline:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_twitter_page_url:
+    weight: 13
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  fieldset:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

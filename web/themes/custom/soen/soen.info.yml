@@ -1,0 +1,84 @@
+name: So-en
+description: Custom So-en theme
+type: theme
+base theme: bs_bootstrap
+core_version_requirement: ^8.7.7 || ^9
+
+bs_versions:
+  bs_base: 8004
+  bs_bootstrap: 8003
+
+regions:
+  top: Top
+  brand: Brand
+  navbar: Navigation Bar
+  navigation_second: Navigation Second
+  content_header: Content Header
+  content: Content
+  content_sidebar: Content Sidebar
+  content_footer: Content Footer
+  footer: Footer
+  footer_second: Footer Second
+  footer_copyright: Footer Copyright
+
+libraries:
+  - soen/global-styling
+
+libraries-override:
+  bs_lib/carousel:
+    css:
+      component:
+        /themes/contrib/bs_base/themes/bs_bootstrap/css/components/carousel.css: css/components/carousel.css
+  bs_lib/close:
+    css:
+      component:
+        /themes/contrib/bs_base/themes/bs_bootstrap/css/components/close.css: css/components/close.css
+  bs_lib/dropdown:
+    css:
+      component:
+        /themes/contrib/bs_base/themes/bs_bootstrap/css/components/dropdown.css: css/components/dropdown.css
+  bs_lib/messages:
+    css:
+      component:
+        /themes/contrib/bs_base/themes/bs_bootstrap/css/components/messages.css: css/components/messages.css
+  bs_lib/modal:
+    css:
+      component:
+        /themes/contrib/bs_base/themes/bs_bootstrap/css/components/modal.css: css/components/modal.css
+  bs_lib/navigation:
+    css:
+      component:
+        /themes/contrib/bs_base/themes/bs_bootstrap/css/components/navigation.css: css/components/navigation.css
+  bs_lib/popover:
+    css:
+      component:
+        /themes/contrib/bs_base/themes/bs_bootstrap/css/components/popover.css: css/components/popover.css
+  bs_lib/progress:
+    css:
+      component:
+        /themes/contrib/bs_base/themes/bs_bootstrap/css/components/progress.css: css/components/progress.css
+  bs_lib/tooltip:
+    css:
+      component:
+        /themes/contrib/bs_base/themes/bs_bootstrap/css/components/tooltip.css: css/components/tooltip.css
+  bs_lib/transitions:
+    css:
+      base:
+        /themes/contrib/bs_base/themes/bs_bootstrap/css/base/transitions.css: css/base/transitions.css
+  bs_bootstrap/global-styling: false
+  bs_bootstrap/maintenance-page:
+    css:
+      component:
+        css/layout/maintenance-page.css: css/layout/maintenance-page.css
+  bs_bootstrap/navbar-offcanvas:
+    css:
+      component:
+        css/components/navbar-offcanvas.css: css/components/navbar-offcanvas.css
+  bs_bootstrap/navbar-second-level-dropdown:
+    css:
+      component:
+        css/components/navbar-second-level-dropdown.css: css/components/navbar-second-level-dropdown.css
+  bs_bootstrap/navbar-second-level-horizontal:
+    css:
+      component:
+        css/components/navbar-second-level-horizontal.css: css/components/navbar-second-level-horizontal.css

@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Install file.
+ */
+
+/**
+ * Implements hook_update_N().
+ *
+ * Integrate with password policy module.
+ */
+function change_pwd_page_update_8001() {
+  // Integrate with password policy module. We update the change password page
+  // route to the one provided by this module to ensure password_policy works
+  // with our module.
+  // Do it here for existing installations.
+  if (\Drupal::moduleHandler()->moduleExists('password_policy')) {
+    _change_pwd_page_set_password_policy_setting();
+  }
+}
+
+/**
+ * Implements hook_install().
+ */
+function change_pwd_page_install() {
+  // Integrate with password policy module. We update the change password page
+  // route to the one provided by this module to ensure password_policy works
+  // with our module.
+  // Do it here for cases where password_policy is installed before our module.
+  if (\Drupal::moduleHandler()->moduleExists('password_policy')) {
+    _change_pwd_page_set_password_policy_setting();
+  }
+}
+
+/**
+ * Implements hook_modules_installed().
+ */
+function change_pwd_page_modules_installed($modules) {
+  // Integrate with password policy module. We update the change password page
+  // route to the one provided by this module to ensure password_policy works
+  // with our module.
+  // Do it here for cases where password_policy is installed after our module.
+  if (in_array('password_policy', $modules)) {
+    _change_pwd_page_set_password_policy_setting();
+  }
+}
+
+/**
+ * Helper function to update password policy config.
+ *
+ * This is here to reduce code duplication.
+ */
+function _change_pwd_page_set_password_policy_setting() {
+  $config = \Drupal::configFactory()->getEditable('password_policy.settings');
+  $config->set('change_password_route', 'change_pwd_page.change_password_form');
+  $config->save();
+}

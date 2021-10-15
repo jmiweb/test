@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Load a custom config class for CKeditor.
+ */
+
+/**
+ * Implements hook_ckeditor_plugin_info_alter().
+ *
+ * @inheritdoc
+ */
+function ckeditor_config_ckeditor_plugin_info_alter(array &$plugins) {
+  $plugins['internal']['class'] = 'Drupal\ckeditor_config\Plugin\CKEditorPlugin\CustomConfig';
+}

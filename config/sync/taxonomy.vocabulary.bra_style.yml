@@ -1,0 +1,8 @@
+uuid: 1228429f-62d2-4fe4-ac9e-eb6c2cb22f2e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Bra Style'
+vid: bra_style
+description: 'Categorizes Bra''s by Style value'
+weight: 0

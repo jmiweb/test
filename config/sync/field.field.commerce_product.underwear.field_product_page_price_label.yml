@@ -1,0 +1,19 @@
+uuid: f69eec15-ef49-4b71-8546-54733a821d7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.underwear
+    - field.storage.commerce_product.field_product_page_price_label
+id: commerce_product.underwear.field_product_page_price_label
+field_name: field_product_page_price_label
+entity_type: commerce_product
+bundle: underwear
+label: 'Price Label (per pack)'
+description: 'Label for the price range of this product. '
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

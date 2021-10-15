@@ -1,0 +1,18 @@
+uuid: 21e7e756-7617-48f2-8efd-f440905b21b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.promotion
+id: node.promotion.title
+field_name: title
+entity_type: node
+bundle: promotion
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

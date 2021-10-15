@@ -1,0 +1,22 @@
+global-styling:
+  css:
+    base:
+      css/base/elements.css: {  }
+      css/base/util.css: {  }
+    component:
+      css/components/block.css: {  }
+      css/components/breadcrumb.css: {  }
+      css/components/buttons.css: {  }
+      css/components/field.css: {  }
+      css/components/forms.css: {  }
+      css/components/entity.css: {  }
+      css/components/navigation.css: {  }
+      css/components/node.css: {  }
+      css/components/pagination.css: {  }
+    layout:
+      css/layout/page.css: {  }
+      css/layout/views.css: {  }
+    theme:
+      css/theme/theme.css: { weight: 200 }
+      css/theme/print.css:
+        media: print

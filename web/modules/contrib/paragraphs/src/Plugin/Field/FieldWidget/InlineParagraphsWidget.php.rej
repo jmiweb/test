@@ -1,0 +1,17 @@
+***************
+*** 648,654 ****
+          ];
+  
+          field_group_attach_groups($element['subform'], $context);
+-         $element['subform']['#pre_render'][] = 'field_group_form_pre_render';
+        }
+  
+        if ($item_mode == 'edit') {
+--- 648,654 ----
+          ];
+  
+          field_group_attach_groups($element['subform'], $context);
++         $element['subform']['#process'][] = 'field_group_form_process';
+        }
+  
+        if ($item_mode == 'edit') {

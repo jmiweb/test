@@ -1,0 +1,30 @@
+uuid: 23ef7ea3-4858-415e-980e-75273c3b0368
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.promtions_cards.field_promotion_reference
+    - field.field.paragraph.promtions_cards.field_promotion_title_heading
+    - paragraphs.paragraphs_type.promtions_cards
+id: paragraph.promtions_cards.default
+targetEntityType: paragraph
+bundle: promtions_cards
+mode: default
+content:
+  field_promotion_reference:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_promotion_title_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

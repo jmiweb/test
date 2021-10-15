@@ -1,0 +1,23 @@
+uuid: 0ce08c13-6bde-4a2b-8850-94dffd09fec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.full_faq_listing.field_faq_listing_embed
+    - paragraphs.paragraphs_type.full_faq_listing
+  module:
+    - viewsreference
+id: paragraph.full_faq_listing.default
+targetEntityType: paragraph
+bundle: full_faq_listing
+mode: default
+content:
+  field_faq_listing_embed:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true

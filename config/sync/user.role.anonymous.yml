@@ -1,0 +1,18 @@
+uuid: 01f11f62-c52b-446e-8425-938d9ff44b60
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'search content'
+  - 'view commerce_product'
+  - 'view commerce_store'
+  - 'view media'
+  - 'view published site setting entities'

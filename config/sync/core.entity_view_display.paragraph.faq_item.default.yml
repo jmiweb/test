@@ -1,0 +1,23 @@
+uuid: abf06133-79f4-453c-bceb-37a4ded4bfad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq_item.field_faq_items_embed
+    - paragraphs.paragraphs_type.faq_item
+id: paragraph.faq_item.default
+targetEntityType: paragraph
+bundle: faq_item
+mode: default
+content:
+  field_faq_items_embed:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: faq_list
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  search_api_excerpt: true

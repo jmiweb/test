@@ -1,0 +1,39 @@
+name: SOEN
+type: profile
+description: 'Build a site with Soen Global features'
+version: VERSION
+core: 8.x
+dependencies:
+  - address
+  - config_split
+  - config_ignore
+  - content_translation
+  - node
+  - block
+  - page_cache
+  - dynamic_page_cache
+  - ckeditor
+  - config
+  - inline_entity_form
+  - menu_link_attributes
+  - menu_link_content
+  - menu_ui
+  - metatag
+  - redirect
+  - redirect_404
+  - redirect_domain
+  - datetime
+  - block_content
+  - image
+  - options
+  - path
+  - taxonomy
+  - file
+  - search
+  - views
+  - paragraphs
+  - toolbar
+  - pathauto
+  - update
+themes:
+  - adminimal_theme

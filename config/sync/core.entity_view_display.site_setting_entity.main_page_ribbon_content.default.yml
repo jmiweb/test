@@ -1,0 +1,27 @@
+uuid: 0ab508c2-8189-4223-8191-4175139225a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.main_page_ribbon_content.field_number_to_display
+    - field.field.site_setting_entity.main_page_ribbon_content.field_ribbon_message
+    - site_settings.site_setting_entity_type.main_page_ribbon_content
+id: site_setting_entity.main_page_ribbon_content.default
+targetEntityType: site_setting_entity
+bundle: main_page_ribbon_content
+mode: default
+content:
+  field_ribbon_message:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_number_to_display: true
+  fieldset: true
+  name: true
+  search_api_excerpt: true
+  user_id: true

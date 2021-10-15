@@ -1,0 +1,22 @@
+uuid: 37ab335b-3983-4a88-920d-b065fc73bce8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content_type_alias_content_page
+label: 'Content Type Alias - Content Page'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  96f1c93a-4888-4c2f-81c5-9f61ec7e775f:
+    id: node_type
+    bundles:
+      content_page: content_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 96f1c93a-4888-4c2f-81c5-9f61ec7e775f
+selection_logic: and
+weight: -5
+relationships: {  }

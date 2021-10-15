@@ -1,0 +1,23 @@
+uuid: 690b762c-fbf9-443f-bd7f-9deb9b0982a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_palette
+    - paragraphs.paragraphs_type.text_with_image
+  module:
+    - options
+id: paragraph.text_with_image.field_color_palette
+field_name: field_color_palette
+entity_type: paragraph
+bundle: text_with_image
+label: 'Color Palette'
+description: 'Select the color palette to use. This will determine the background color of the text portion of this block as well as the color of the font. '
+required: true
+translatable: true
+default_value:
+  -
+    value: plain
+default_value_callback: ''
+settings: {  }
+field_type: list_string

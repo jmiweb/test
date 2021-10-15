@@ -1,0 +1,16 @@
+name: Password Separate Form
+type: module
+description: 'Provides a separate page containing a form for the current user to change their password.'
+package: User Management
+dependencies:
+  - user
+
+# Information added by Drupal.org packaging script on 2016-10-28
+core: '8.x'
+core_version_requirement: ^8 || ^9
+# datestamp: 1470233791
+
+# Information added by Drupal.org packaging script on 2020-06-11
+version: '8.x-1.0'
+project: 'change_pwd_page'
+datestamp: 1591905921

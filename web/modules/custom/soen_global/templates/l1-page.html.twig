@@ -1,0 +1,60 @@
+<div class="container l1-wrapper">
+  <div class="row l1-top">
+    <div class="col-12">
+      <h1 class="l1-headline">{{ headline }}</h1>
+      <h3 class="l1-subheadline">{{ subheadline}}</h2>
+    </div>
+  </div>
+  <div class="row l1-bottom">
+    <div class="col-12 col-md-6 l1-content d-none d-md-block">
+      <div class="l1-grid arrange-{% if parentTermGroup == 3 %}3x2{% else %}2x3{% endif %}">
+
+      {% for i in 0..4 %}
+        <div class="l1-toc-item item-{{ i }}">
+          <a href="#" onclick="return false" data-for="postercontent-{{ parentTerms[i].id }}">
+            <span>{{ parentTerms[i].name}}</span>
+            {{ parentTerms[i].splash_image }}
+          </a>
+        </div>
+      {% endfor %}
+
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+
+      <!-- Process Default Poster -->
+      {% if defaultPoster is not empty %}
+        <div class="l1-poster-body d-none d-md-block" id="postercontent-default">
+          <div class="l1-poster-bg">
+            {{ defaultPoster.splash_image }}
+          </div>
+          <div class="l1-poster-overlay default-messaging">
+            {{ defaultPoster.text }}
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- Process Poster content --> 
+      {% for poster in mainContent %}
+        <div class="l1-poster-body {% if poster.poster_id == defaultTerm %}show{% else %}hidden{% endif %} d-sm-block d-md-none" id="postercontent-{{ poster.poster_id }}">
+          <div class="l1-poster-bg">
+            {{ poster.splash_image }}
+          </div>
+          <div class="l1-poster-overlay">
+            <h4 class="l1-poster-title">
+              {{ poster.poster_name }}
+            </h4>
+            <div class="l1-poster-links">
+              <ul>
+                {% for link in poster.child_links %}
+                  <li>{{ link }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div> <!-- end container -->

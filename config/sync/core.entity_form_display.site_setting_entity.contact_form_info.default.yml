@@ -1,0 +1,144 @@
+uuid: 03b0859b-33e5-4761-a025-070b7dd9c9ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.contact_form_info.field_contact_email
+    - field.field.site_setting_entity.contact_form_info.field_contact_form_title_heading
+    - field.field.site_setting_entity.contact_form_info.field_contact_message
+    - field.field.site_setting_entity.contact_form_info.field_contact_phone
+    - field.field.site_setting_entity.contact_form_info.field_facebook_page_url
+    - field.field.site_setting_entity.contact_form_info.field_instagram_page_url
+    - field.field.site_setting_entity.contact_form_info.field_twitter_page_url
+    - site_settings.site_setting_entity_type.contact_form_info
+  module:
+    - field_group
+    - link
+    - telephone
+third_party_settings:
+  field_group:
+    group_company_contact_info:
+      children:
+        - field_contact_form_title_heading
+        - field_contact_message
+        - field_contact_phone
+        - field_contact_email
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Company Contact Info'
+    group_social_media_urls:
+      children:
+        - field_facebook_page_url
+        - field_instagram_page_url
+        - field_twitter_page_url
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Social Media URLs'
+id: site_setting_entity.contact_form_info.default
+targetEntityType: site_setting_entity
+bundle: contact_form_info
+mode: default
+content:
+  field_contact_email:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_contact_form_title_heading:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_contact_message:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_contact_phone:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_facebook_page_url:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_instagram_page_url:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_twitter_page_url:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  fieldset:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 5
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

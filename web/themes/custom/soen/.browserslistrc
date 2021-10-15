@@ -1,0 +1,6 @@
+# Browsers that we support
+
+last 2 version
+ie >= 11
+Safari >= 8
+not bb < 10 # means Support only latest Blackberry 10

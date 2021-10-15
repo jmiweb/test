@@ -1,0 +1,267 @@
+// Level 1 product page theming
+.l1 {
+    &-wrapper {
+        margin-bottom: 5rem;
+
+        @include media-breakpoint-up(md) {
+            height: 60vh;
+            min-height: 700px;
+        }
+    }
+
+    &-content {
+        height: 100%;
+        // max-height: 100vh;
+
+        div {
+            height: 100%;
+        }
+    }
+
+    &-top {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        height: auto !important; // @todo: review
+    }
+
+    &-bottom {
+        @include media-breakpoint-up(md) {
+            height: 85%;
+            overflow: hidden;
+        }
+    }
+    
+    &-headline {
+        color: $brand-primary;
+        font-size: 2.5rem;
+        font-family: $font-family-temeraire;
+        font-style: italic;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &-subheadline {
+        font-size: 1rem;
+        text-align: center;
+        color: $grey;
+    }
+
+    &-toc-item {
+        height: 100%;
+        overflow: hidden;
+        // box-shadow: 0 0 1px 0 inset #000;
+        background: $gray-800;
+
+        a {
+            justify-self: stretch;
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: relative;
+
+            &::after {
+                display: block;
+                content: '';
+                transition: opacity 0.3s;
+                background: rgba($black, 0.5);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+        }
+
+        span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $white;
+        }
+
+        img {
+            object-fit: cover;
+            margin: 0;
+            display: block;
+            width: 100%;
+        }
+
+        div {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+
+        &.arrange-3x2 {
+            .item-0 {
+                grid-row: 1 / span 2;
+                grid-column: 1 / span 2;
+            }
+            
+            .item-1 {
+                grid-row: 1 / span 1;
+                grid-column: 3 / span 3;
+            }
+            
+            .item-2 {
+                grid-row: 2 / span 1;
+                grid-column: 3 / span 3;
+            }
+            
+            .item-3 {
+                grid-row: 3 / span 2;
+                grid-column: 1 / span 3;
+            }
+            
+            .item-4 {
+                grid-row: 3 / span 2;
+                grid-column: 4 / span 2;
+            }
+        }
+
+        &.arrange-2x3 {
+            .item-0 {
+                grid-row: 3 / span 2;
+                grid-column: 1 / span 2;
+            }
+            
+            .item-1 {
+                grid-row: 3 / span 1;
+                grid-column: 3 / span 3;
+            }
+            
+            .item-2 {
+                grid-row: 4 / span 1;
+                grid-column: 3 / span 3;
+            }
+            
+            .item-3 {
+                grid-row: 1 / span 2;
+                grid-column: 1 / span 3;
+            }
+            
+            .item-4 {
+                grid-row: 1 / span 2;
+                grid-column: 4 / span 2;
+            }
+        }
+    }
+
+    &-poster {
+        &-body {
+            position: relative;
+            overflow: hidden;
+            
+            &.hidden {
+                @extend .d-none;
+            }
+
+            &.show {
+                display: block !important;
+            }
+
+            @include media-breakpoint-up(md) {
+                height: 100%;
+            }
+        }
+
+        &-title {
+            color: $brand-primary;
+            font-size: 2rem;
+            font-family: $font-family-temeraire;
+            font-style: italic;
+        }
+
+        &-links {
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li a {
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: $grey-medium-2;
+                    display: block;
+                }
+            }
+        }
+
+        &-bg {
+            height: 100%;
+
+            div {
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                margin: 0;
+                width: 100%;
+            }
+
+            .contextual { // helper (admin only)
+                z-index: 2;
+            }
+        }
+
+        &-overlay {
+            position: absolute;
+            background: rgba($white, 0.3);
+            left: 0;
+            top: 3rem;
+            padding: 1.2rem;
+            animation: fade 0.3s forwards;
+            z-index: 3;
+    
+            img {
+                margin: 0;
+            }
+
+            ul {
+                margin: 0;
+            }
+            
+            .show & {
+                display: block;
+            }
+
+            &.default-messaging {
+                background: rgba($black, 0.3);
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                text-transform: uppercase;
+                color: $white;
+                padding: 2rem;
+                line-height: 1.8;
+                font-size: 1.2rem;
+                font-weight: 500;
+                z-index: 2;
+                height: auto;
+                text-align: center;
+                display: block;
+            }
+
+            @include media-breakpoint-up(md) {
+                display: none;
+            }
+        }
+    }
+}

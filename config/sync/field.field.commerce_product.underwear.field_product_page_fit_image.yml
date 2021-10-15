@@ -1,0 +1,28 @@
+uuid: f673a72d-dcf4-4749-af4a-99fdd229ebdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.underwear
+    - field.storage.commerce_product.field_product_page_fit_image
+    - media.type.image_upload
+id: commerce_product.underwear.field_product_page_fit_image
+field_name: field_product_page_fit_image
+entity_type: commerce_product
+bundle: underwear
+label: 'Fit Sample Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image_upload: image_upload
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

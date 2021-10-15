@@ -1,0 +1,10 @@
+uuid: b268d5d5-e974-4b8d-a23e-b7062f02869e
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.product_display_page
+label: 'Product Display Page'
+targetEntityType: commerce_product_variation
+cache: true

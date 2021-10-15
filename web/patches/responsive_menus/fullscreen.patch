@@ -1,0 +1,14 @@
+diff --git a/js/responsive_menu.config.js b/js/responsive_menu.config.js
+index bbaceaf..91eeb96 100644
+--- a/js/responsive_menu.config.js
++++ b/js/responsive_menu.config.js
+@@ -26,7 +26,8 @@
+             extensions: [
+               theme,
+               'effect-slide-menu',
+-              position === 'left' ? 'position-left' : 'position-right'
++              position === 'left' ? 'position-left' : 'position-right',
++              'fullscreen'
+             ],
+             offCanvas: {
+               zposition: 'next',

@@ -1,0 +1,19 @@
+uuid: a9d9f827-ec63-49e6-a33d-b0c606051d62
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - link
+id: commerce_product_variation.field_buy_now_link_shopee
+field_name: field_buy_now_link_shopee
+entity_type: commerce_product_variation
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

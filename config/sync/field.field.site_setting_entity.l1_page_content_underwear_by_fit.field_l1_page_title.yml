@@ -1,0 +1,19 @@
+uuid: 535df077-6396-4a3e-ae8d-55075244bea4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_l1_page_title
+    - site_settings.site_setting_entity_type.l1_page_content_underwear_by_fit
+id: site_setting_entity.l1_page_content_underwear_by_fit.field_l1_page_title
+field_name: field_l1_page_title
+entity_type: site_setting_entity
+bundle: l1_page_content_underwear_by_fit
+label: 'Page Title'
+description: 'Set the page title for this L1 page. The value of this field will be displayed in the browser''s tab. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

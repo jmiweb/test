@@ -1,0 +1,184 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\media\Entity\Media;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ */
+function bootstrap_sass_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+}
+
+/**
+ * Implements hook_preprocess_theme
+ */
+function soen_theme_preprocess_page(&$variables) {
+  $ribbon_content = NULL;
+  $footer_fields = [];
+  
+  if (isset($variables['site_settings'])) {
+    
+    // GLOBAL ELEMENTS
+    if (isset($variables['site_settings']['global_elements'])) {
+      
+      // RIBBON CONTENT
+      if (!empty($variables['site_settings']['global_elements']['main_page_ribbon_content']) && 
+      is_array($variables['site_settings']['global_elements']['main_page_ribbon_content'])) {
+        $messages_array = $variables['site_settings']['global_elements']['main_page_ribbon_content']['field_ribbon_message'];
+        if (!empty($messages_array)) {
+          if (is_array($messages_array)) {
+            $num_to_display = $variables['site_settings']['global_elements']['main_page_ribbon_content']['field_number_to_display'];
+            $messages = array_shift($messages_array);
+            $ribbon_content = $messages['value'];
+          } else {
+            $ribbon_content = $messages_array;
+          }
+        }
+      }
+    }
+
+    // FOOTER ELEMENTS
+    if (isset($variables['site_settings']['footer_content'])) {
+      if (!empty($variables['site_settings']['footer_content']['footer_content_links'])) {
+        foreach ($variables['site_settings']['footer_content']['footer_content_links'] as $field_name => $footer_content_fields) {
+          if (is_array($footer_content_fields)) {
+            $footer_fields[$field_name] = $footer_content_fields['uri'];
+          } else {
+            $footer_fields[$field_name]  = $footer_content_fields;
+          }
+        }
+      }
+    }
+  }
+
+  $variables['ribbon_text'] = $ribbon_content;
+  $variables['footer_content_settings'] = $footer_fields;
+}
+
+/**
+ * Implements hook_preprocess_paragraph__TYPE().
+ */
+ function soen_theme_preprocess_paragraph__text_banner(&$variables) {
+  // Default the palette to none. 
+  $class_val = '';
+  $emphasis = $variables['paragraph']->get('field_color_palette')->value;
+  if (!empty($emphasis)) {
+    $class_val = 'palette--' . $emphasis;
+  } else {
+    $class_val = 'palette-none';
+  }
+
+  $variables['paragraph_palette'] = $class_val;  
+}
+
+/**
+ * Implements hook_preprocess_paragraph__TYPE().
+ */
+ function soen_theme_preprocess_paragraph__text_with_image(&$variables) { 
+  $class_val = '';
+  $class_val2 = '';
+  $emphasis = $variables['paragraph']->get('field_color_palette')->value;
+  $orientation = $variables['paragraph']->get('field_twi_orientation')->value;
+
+  if (!empty($emphasis)) {
+    $class_val = 'palette--' . $emphasis;
+  } else {
+    $class_val = 'palette-none';
+  }
+
+  if (!empty($orientation)) {
+    $class_val2 = 'orientation--' . $orientation;
+  }
+
+  $variables['paragraph_palette'] = $class_val;
+  $variables['paragraph_orientation'] = $class_val2;
+  $variables['field_image_url'] = _var_image_url($variables, 'field_image','');
+}
+
+//pull image field URL (original or styled)
+function _var_image_url($vars, $field, $style_name = '') {
+  if (!empty($vars['content'][$field]['#object'])) {
+    $fields = $vars['content'][$field]['#object']->getFields();
+    $image = $fields[$field]->getValue();
+
+    if (!empty($image[0]['target_id'])) {
+      $media_entity_id = $image[0]['target_id'];
+      $file = \Drupal::entityTypeManager()
+        ->getStorage('media')
+        ->load($media_entity_id);
+      
+      $uri = $file->get('field_media_image')->entity->getFileUri();
+      if(!empty($style_name)) {
+        $url = \Drupal\image\Entity\ImageStyle::load($style_name)->buildUrl($uri);
+        return $url; //the styled URL
+      } else {
+        return file_create_url($uri); //original
+      }
+    }
+  }
+  return false;
+}
+
+/*
+ * Implements hook_form_alter().
+ */
+function soen_theme_form_alter(&$form, $form_state, $form_id) {
+  if (strpos($form_id, 'global_contact_form') !== FALSE) {
+   $form['actions']['preview']['#access'] = FALSE;
+ }
+}
+
+/**
+ * Implements hook_preprocess_node() for NODE document templates.
+ */
+function soen_theme_preprocess_node(&$variables) {
+  $node_title = $variables['node']->get('title')->value;
+  $node_type = $variables['node']->getType();
+
+  // Adding view element to L2 pages. 
+  $allowed_node_types = ['category_pair_page_l2_bra', 'category_pair_page_l2_underwear'];
+  if (in_array($node_type, $allowed_node_types) ) {
+    
+    $collection_id = $variables['node']->get('field_prod_collection_ref')->getValue();
+    $style_id = $variables['node']->get('field_prod_style_ref')->getValue();
+
+    $display_id = null;
+    switch ($node_type) {
+      case 'category_pair_page_l2_bra':    
+        $display_id = 'bra_grouping';
+        break;
+      case 'category_pair_page_l2_underwear':
+        $display_id = 'underwear_grouping';
+        break;
+    }
+    
+    $product_tabs = views_embed_view('category_pair_l2_page_products', $display_id, $collection_id[0]['target_id'], $style_id[0]['target_id']);
+    $variables['product_tabs'] = \Drupal::service('renderer')->render($product_tabs);
+
+  }
+}
+

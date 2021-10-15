@@ -1,0 +1,14 @@
+ignored_config_entities:
+  - system.site
+  - 'block.block.*'
+  - 'webform.webform.*'
+  - 'xmlsitemap.*'
+  - 'xmlsitemap_engines.*'
+  - 'ultimate_cron.*'
+  - 'reroute_email.*'
+  - seckit.settings
+  - user.mail
+  - 'system.mail:interface'
+_core:
+  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
+enable_export_filtering: '1'

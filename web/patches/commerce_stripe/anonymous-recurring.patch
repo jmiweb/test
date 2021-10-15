@@ -1,0 +1,124 @@
+diff --git a/src/ErrorHelper.php b/src/ErrorHelper.php
+index 357fd43..4555601 100755
+--- a/src/ErrorHelper.php
++++ b/src/ErrorHelper.php
+@@ -23,18 +23,10 @@ class ErrorHelper {
+    *   The Commerce exception.
+    */
+   public static function handleException(\Stripe\Error\Base $exception) {
+-    if ($exception instanceof \Stripe\Error\Card) {
++    if ($exception instanceof \Stripe\Error\Card) { // user encounters an error upon entering cc
+       \Drupal::logger('commerce_stripe')->warning($exception->getMessage());
+-      if ($exception->getStripeCode() == 'card_declined' && $exception->getDeclineCode() == 'card_not_supported') {
+-        // Stripe only supports Visa/MasterCard/Amex for non-USD transactions.
+-        // @todo Find a better way to communicate this to the customer.
+-        $message = t('Your card is not supported. Please use a Visa, MasterCard, or American Express card.');
+-        drupal_set_message($message, 'warning');
+-        throw new HardDeclineException($message);
+-      }
+-      else {
+-        throw new DeclineException('We encountered an error processing your card details. Please verify your details and try again.');
+-      }
++      $message = $exception->getMessage();
++      throw new HardDeclineException($message); // throw the message from stripe
+     }
+     elseif ($exception instanceof \Stripe\Error\RateLimit) {
+       \Drupal::logger('commerce_stripe')->warning($exception->getMessage());
+diff --git a/src/Plugin/Commerce/PaymentGateway/Stripe.php b/src/Plugin/Commerce/PaymentGateway/Stripe.php
+index 608e3c3..e891069 100755
+--- a/src/Plugin/Commerce/PaymentGateway/Stripe.php
++++ b/src/Plugin/Commerce/PaymentGateway/Stripe.php
+@@ -19,6 +19,7 @@ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Site\Settings;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
++use Drupal\user\UserInterface;
+ 
+ /**
+  * Provides the Stripe payment gateway.
+@@ -201,8 +202,10 @@ class Stripe extends OnsitePaymentGatewayBase implements StripeInterface {
+     $transaction_data['metadata'] += $event->getMetadata();
+ 
+     $owner = $payment_method->getOwner();
+-    if ($owner && $owner->isAuthenticated()) {
+-      $transaction_data['customer'] = $this->getRemoteCustomerId($owner);
++    $transaction_data['customer'] = $this->getRemoteCustomerId($owner, $payment->getOrder()->getEmail());
++    if ($owner && empty($transaction_data['customer']) && $this->getSetTempCustomerId()) { // no permanent customer id yet, check temp
++      $transaction_data['customer'] = $this->getSetTempCustomerId();
++      $this->setRemoteCustomerId($owner, $customer->id); // persist to avoid calls to stripe for the recurring payments
+     }
+ 
+     try {
+@@ -375,9 +378,15 @@ class Stripe extends OnsitePaymentGatewayBase implements StripeInterface {
+     $customer_id = NULL;
+     $customer_data = [];
+     if ($owner && $owner->isAuthenticated()) {
+-      $customer_id = $this->getRemoteCustomerId($owner);
+       $customer_data['email'] = $owner->getEmail();
+     }
++    else if (!empty($payment_details['email'])) {
++      $customer_data['email'] = $payment_details['email'];
++      if ($account = user_load_by_mail($customer_data['email'])) { // anonymous user has an existing account
++        $owner = $account;
++      }
++    }
++    $customer_id = $this->getRemoteCustomerId($owner, $payment_details['email']);
+ 
+     if ($customer_id) {
+       // If the customer id already exists, use the Stripe form token to create the new card.
+@@ -391,18 +400,19 @@ class Stripe extends OnsitePaymentGatewayBase implements StripeInterface {
+         ErrorHelper::handleException($e);
+       }
+     }
+-    elseif ($owner && $owner->isAuthenticated()) {
++    elseif (!empty($customer_data['email'])) {
+       // Create both the customer and the payment method.
+       try {
++        \Drupal::logger('commerce_stripe')->notice('Create customer and add payment for ' . $customer_data['email']);      
+         $customer = \Stripe\Customer::create([
+-          'email' => $owner->getEmail(),
+-          'description' => $this->t('Customer for :mail', [':mail' => $owner->getEmail()]),
++          'email' => $customer_data['email'],
++          'description' => $this->t('Customer for :mail', [':mail' => $customer_data['email']]),
+           'source' => $payment_details['stripe_token'],
+-        ]);
++        ]);  
+         $cards = \Stripe\Customer::retrieve($customer->id)->sources->all(['object' => 'card']);
+         $cards_array = \Stripe\Util\Util::convertStripeObjectToArray([$cards]);
+         $this->setRemoteCustomerId($owner, $customer->id);
+-        $owner->save();
++        $this->getSetTempCustomerId($customer->id); // store temporarily so that we can complete order (before user creation)
+         foreach ($cards_array[0]['data'] as $card) {
+           return $card;
+         }
+@@ -447,4 +457,30 @@ class Stripe extends OnsitePaymentGatewayBase implements StripeInterface {
+     return $map[$card_type];
+   }
+ 
++  public function getSetTempCustomerId($set = false) {
++    $tempstore = \Drupal::service('user.private_tempstore')->get('commerce_stripe');
++    if ($set) {
++      $tempstore->set('temp_customer_id', $set);
++    }
++    return $tempstore->get('temp_customer_id');
++  }
++
++  public function getRemoteCustomerId($owner, $email = null) {
++    if ($owner && $owner->isAuthenticated()) {
++      return parent::getRemoteCustomerId($owner);  
++    }
++    if ($email && $account = user_load_by_mail($email)) {
++      return parent::getRemoteCustomerId($account);  
++    }
++    return null;
++  }
++
++  public function setRemoteCustomerId($owner, $id) {
++    if ($owner && $owner->isAuthenticated()) {
++      \Drupal::logger('commerce_stripe')->notice(strtr('Store customer id !id for !mail', ['!id' => $id, '!mail' => $owner->getEmail()]));      
++      parent::setRemoteCustomerId($owner, $id);  
++      $owner->save();  
++    }
++  }
++
+ }

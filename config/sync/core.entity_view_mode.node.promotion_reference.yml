@@ -1,0 +1,10 @@
+uuid: 5771b10a-eea3-4562-89e5-c4241d5be9da
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.promotion_reference
+label: 'Promotion Reference'
+targetEntityType: node
+cache: true

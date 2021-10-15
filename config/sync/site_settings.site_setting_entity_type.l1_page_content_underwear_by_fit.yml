@@ -1,0 +1,8 @@
+uuid: 0d809286-0e9d-4d6e-abe6-6ff08523dc7b
+langcode: en
+status: true
+dependencies: {  }
+id: l1_page_content_underwear_by_fit
+label: 'Underwear Categories - By Fit Page'
+fieldset: 'Level One Page Content'
+multiple: false

@@ -1,0 +1,20 @@
+# This file holds various gulp configurations that we need in our Gulp process.
+#
+# Note that options from this file will be merged with Gulp options from parent
+# theme.
+
+parentTheme:
+  # Order is important and needs to goes from top most parent to bottom.
+  # Default path values will work for standard positions of contrib and custom
+  # themes.
+  # Theme path to parent theme folder can be relative or absolute.
+  -
+    name: 'bs_bootstrap'
+    path: '../../contrib/bs_base/themes/bs_bootstrap/'
+  -
+    name: 'bs_base'
+    path: '../../contrib/bs_base/'
+
+# Stylelint config we will reuse from bs_base parent theme.
+stylelint:
+  configFile: '../../contrib/bs_base/.stylelintrc.yml'

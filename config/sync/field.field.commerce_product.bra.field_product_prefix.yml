@@ -1,0 +1,19 @@
+uuid: bc02711b-8721-4328-aaee-0ea644c57eb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.bra
+    - field.storage.commerce_product.field_product_prefix
+id: commerce_product.bra.field_product_prefix
+field_name: field_product_prefix
+entity_type: commerce_product
+bundle: bra
+label: 'Product Prefix / Item Code'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

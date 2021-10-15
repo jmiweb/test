@@ -1,0 +1,10 @@
+uuid: 8bbf55b0-1b64-48a8-bdec-5003528bf883
+langcode: en
+status: true
+dependencies: {  }
+id: bra
+label: Bra
+orderItemType: null
+generateTitle: null
+traits: {  }
+locked: false

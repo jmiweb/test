@@ -1,0 +1,29 @@
+uuid: 25341a44-4169-4fa3-822b-70c2b3a66a48
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.underwear
+    - field.storage.commerce_product.field_u_style_ref
+    - taxonomy.vocabulary.underwear_style
+id: commerce_product.underwear.field_u_style_ref
+field_name: field_u_style_ref
+entity_type: commerce_product
+bundle: underwear
+label: Style
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      underwear_style: underwear_style
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

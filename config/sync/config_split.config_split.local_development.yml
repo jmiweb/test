@@ -1,0 +1,20 @@
+uuid: 39e57720-f2be-4b61-a220-64a0c7d4e7d1
+langcode: en
+status: true
+dependencies: {  }
+id: local_development
+label: 'Local Development'
+description: 'Stores settings specific for local environment'
+folder: ../config/split/local_development
+module:
+  dblog: 0
+  devel: 0
+  field_ui: 0
+  stage_file_proxy: 0
+  views_ui: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

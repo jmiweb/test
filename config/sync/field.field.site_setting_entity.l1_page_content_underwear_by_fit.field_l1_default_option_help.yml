@@ -1,0 +1,21 @@
+uuid: 0f046af0-fbf1-4d4e-879d-24f89bc4271b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_l1_default_option_help
+    - site_settings.site_setting_entity_type.l1_page_content_underwear_by_fit
+id: site_setting_entity.l1_page_content_underwear_by_fit.field_l1_default_option_help
+field_name: field_l1_default_option_help
+entity_type: site_setting_entity
+bundle: l1_page_content_underwear_by_fit
+label: 'Default Option Help Text'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Tap on a fit to begin exploring'
+default_value_callback: ''
+settings: {  }
+field_type: string

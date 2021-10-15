@@ -1,0 +1,20 @@
+diff --git a/modules/payment/src/PluginForm/PaymentMethodAddForm.php b/modules/payment/src/PluginForm/PaymentMethodAddForm.php
+index 4fbeecd5..e5df16bb 100644
+--- a/modules/payment/src/PluginForm/PaymentMethodAddForm.php
++++ b/modules/payment/src/PluginForm/PaymentMethodAddForm.php
+@@ -170,11 +170,14 @@ class PaymentMethodAddForm extends PaymentGatewayFormBase implements ContainerIn
+     // The payment method form is customer facing. For security reasons
+     // the returned errors need to be more generic.
+     try {
++      if ($order = $this->routeMatch->getParameter('commerce_order')) {
++        $values['payment_details']['email'] = $order->getEmail(); // add email to details so that payment module can use it
++      }
+       $payment_gateway_plugin->createPaymentMethod($payment_method, $values['payment_details']);
+     }
+     catch (DeclineException $e) {
+       $this->logger->warning($e->getMessage());
+-      throw new DeclineException(t('We encountered an error processing your payment method. Please verify your details and try again.'));
++      throw new DeclineException($e->getMessage()); // the error message is fairly user friendly so use it
+     }
+     catch (PaymentGatewayException $e) {
+       $this->logger->error($e->getMessage());

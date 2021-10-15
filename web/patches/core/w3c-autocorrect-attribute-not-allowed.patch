@@ -1,0 +1,15 @@
+Index: web/core/modules/user/src/Form/UserLoginForm.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- web/core/modules/user/src/Form/UserLoginForm.php	(date 1563574156000)
++++ web/core/modules/user/src/Form/UserLoginForm.php	(date 1563574280707)
+@@ -98,7 +98,6 @@
+       '#description' => $this->t('Enter your @s username.', ['@s' => $config->get('name')]),
+       '#required' => TRUE,
+       '#attributes' => [
+-        'autocorrect' => 'none',
+         'autocapitalize' => 'none',
+         'spellcheck' => 'false',
+         'autofocus' => 'autofocus',

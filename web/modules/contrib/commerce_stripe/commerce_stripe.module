@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Module file for Commerce Stripe.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function commerce_stripe_page_attachments(array &$page) {
+  // To best leverage Stripe’s advanced fraud functionality we need this on
+  // all pages. See https://stripe.com/docs/stripe-js/elements/quickstart.
+  $page['#attached']['library'][] = 'commerce_stripe/stripe';
+}

@@ -1,0 +1,13 @@
+button_value: 'Save & Continue Editing'
+button_weight: '-1'
+dropbutton: 1
+hide_default_save: 0
+unpublish: 0
+unpublish_new_only: 0
+node_types:
+  content_page: content_page
+_core:
+  default_config_hash: nNcqzC75Ga_iQShU0PBJRKk48eiw1ArP7A3xAL5Lveg
+hide_default_publish: 0
+hide_default_preview: 1
+hide_default_delete: 0

@@ -1,0 +1,51 @@
+***************
+*** 9,15 ****
+  use Drupal\Core\Form\FormBase;
+  use Drupal\Core\Form\FormStateInterface;
+  use Drupal\Core\Url;
+- use Drupal\user\SharedTempStoreFactory;
+  use Symfony\Component\DependencyInjection\ContainerInterface;
+  
+  /**
+--- 9,15 ----
+  use Drupal\Core\Form\FormBase;
+  use Drupal\Core\Form\FormStateInterface;
+  use Drupal\Core\Url;
++ use Drupal\Core\TempStore\SharedTempStoreFactory;
+  use Symfony\Component\DependencyInjection\ContainerInterface;
+  
+  /**
+***************
+*** 21,27 ****
+    /**
+     * Adding a tempstore for the multiple steps of the wizard form.
+     *
+-    * @var \Drupal\user\SharedTempStoreFactory
+     */
+    protected $tempstore;
+  
+--- 21,27 ----
+    /**
+     * Adding a tempstore for the multiple steps of the wizard form.
+     *
++    * @var \Drupal\Core\TempStore\SharedTempStoreFactory
+     */
+    protected $tempstore;
+  
+***************
+*** 50,56 ****
+     * {@inheritdoc}
+     */
+    public static function create(ContainerInterface $container) {
+-     return new static($container->get('user.shared_tempstore'), $container->get('plugin.manager.password_policy.password_constraint'));
+    }
+  
+    /**
+--- 50,56 ----
+     * {@inheritdoc}
+     */
+    public static function create(ContainerInterface $container) {
++     return new static($container->get('tempstore.shared'), $container->get('plugin.manager.password_policy.password_constraint'));
+    }
+  
+    /**

@@ -1,0 +1,17 @@
+uuid: 5f4b3ece-2cf3-4d7d-8887-59adf516aaae
+langcode: en
+status: true
+dependencies: {  }
+id: shared_dev
+label: 'Shared Dev'
+description: ''
+folder: ../config/split/shared_dev
+module:
+  devel: 0
+  dblog: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 87720432-b96c-4250-83d8-b10b8d5c7114
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.bra
+    - field.storage.commerce_product.field_b_style_ref
+    - taxonomy.vocabulary.bra_style
+id: commerce_product.bra.field_b_style_ref
+field_name: field_b_style_ref
+entity_type: commerce_product
+bundle: bra
+label: Style
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bra_style: bra_style
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: b7536e43-e421-4f1a-b97b-0c3eca338553
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_promotion_title_heading
+field_name: field_promotion_title_heading
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

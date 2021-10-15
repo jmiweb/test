@@ -1,0 +1,21 @@
+uuid: 91fe5c7c-a26d-40ff-b8f6-1ee76ee13935
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_l1_default_option_help
+    - site_settings.site_setting_entity_type.l1_page_content_underwear_by_col
+id: site_setting_entity.l1_page_content_underwear_by_col.field_l1_default_option_help
+field_name: field_l1_default_option_help
+entity_type: site_setting_entity
+bundle: l1_page_content_underwear_by_col
+label: 'Default Option Help Text'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 'Tap on a collection to begin exploring'
+default_value_callback: ''
+settings: {  }
+field_type: string

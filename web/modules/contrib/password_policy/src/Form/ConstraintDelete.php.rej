@@ -1,0 +1,51 @@
+***************
+*** 6,12 ****
+  use Drupal\Core\Form\ConfirmFormHelper;
+  use Drupal\Core\Form\FormStateInterface;
+  use Drupal\Core\Url;
+- use Drupal\user\SharedTempStoreFactory;
+  use Symfony\Component\DependencyInjection\ContainerInterface;
+  
+  /**
+--- 6,12 ----
+  use Drupal\Core\Form\ConfirmFormHelper;
+  use Drupal\Core\Form\FormStateInterface;
+  use Drupal\Core\Url;
++ use Drupal\Core\TempStore\SharedTempStoreFactory;
+  use Symfony\Component\DependencyInjection\ContainerInterface;
+  
+  /**
+***************
+*** 17,23 ****
+    /**
+     * Temp store to maintain state between steps of the wizard.
+     *
+-    * @var \Drupal\user\SharedTempStoreFactory
+     */
+    protected $tempstore;
+  
+--- 17,23 ----
+    /**
+     * Temp store to maintain state between steps of the wizard.
+     *
++    * @var \Drupal\Core\TempStore\SharedTempStoreFactory
+     */
+    protected $tempstore;
+  
+***************
+*** 46,52 ****
+     * {@inheritdoc}
+     */
+    public static function create(ContainerInterface $container) {
+-     return new static($container->get('user.shared_tempstore'));
+    }
+  
+    /**
+--- 46,52 ----
+     * {@inheritdoc}
+     */
+    public static function create(ContainerInterface $container) {
++     return new static($container->get('tempstore.shared'));
+    }
+  
+    /**

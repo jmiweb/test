@@ -1,0 +1,158 @@
+uuid: 587cc185-a31c-4b72-aa3c-cb78c31c0f81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.l1_page_content_bra_by_fit.field_default_sample_fit_image
+    - field.field.site_setting_entity.l1_page_content_bra_by_fit.field_l1_category_content
+    - field.field.site_setting_entity.l1_page_content_bra_by_fit.field_l1_default_option_help
+    - field.field.site_setting_entity.l1_page_content_bra_by_fit.field_l1_headline
+    - field.field.site_setting_entity.l1_page_content_bra_by_fit.field_l1_page_layout
+    - field.field.site_setting_entity.l1_page_content_bra_by_fit.field_l1_page_title
+    - field.field.site_setting_entity.l1_page_content_bra_by_fit.field_l1_sub_heading
+    - site_settings.site_setting_entity_type.l1_page_content_bra_by_fit
+  module:
+    - field_group
+    - media_library
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_configure:
+      children:
+        - field_l1_page_layout
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: Configure
+    group_titles_heading_content:
+      children:
+        - field_l1_page_title
+        - field_l1_headline
+        - field_l1_sub_heading
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Titles / Heading Content'
+    group_default_content_no_option_:
+      children:
+        - field_l1_default_option_help
+        - field_default_sample_fit_image
+      parent_name: ''
+      weight: 5
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: false
+      label: 'Default Content (No Option pre-selected)'
+id: site_setting_entity.l1_page_content_bra_by_fit.default
+targetEntityType: site_setting_entity
+bundle: l1_page_content_bra_by_fit
+mode: default
+content:
+  field_default_sample_fit_image:
+    weight: 10
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_l1_category_content:
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: category_group_bra_by_fit_
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_l1_default_option_help:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_l1_headline:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_l1_page_layout:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_l1_page_title:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_l1_sub_heading:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  fieldset:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

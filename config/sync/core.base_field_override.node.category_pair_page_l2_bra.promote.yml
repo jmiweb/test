@@ -1,0 +1,22 @@
+uuid: 7304e5f2-b8ff-47be-bc62-70c73ff13cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.category_pair_page_l2_bra
+id: node.category_pair_page_l2_bra.promote
+field_name: promote
+entity_type: node
+bundle: category_pair_page_l2_bra
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

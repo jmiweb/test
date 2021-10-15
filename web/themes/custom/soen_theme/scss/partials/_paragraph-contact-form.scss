@@ -1,0 +1,51 @@
+.paragraph--type--contact-form {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .contact-message-icon {
+        content: url('../images/icons/icon-contact.svg');
+    }
+
+    .contact-phone-icon {
+        content: url('../images/icons/icon-phone.svg');
+    }
+
+    .contact-email-icon {
+        content: url('../images/icons/icon-email.svg');
+    }
+
+    .contact-social-media-fb-icon {
+        content: url('../images/icons/icon-facebook.svg');
+    }
+
+    .contact-social-media-ig-icon {
+        content: url('../images/icons/icon-instagram.svg');
+    }
+
+    .contact-social-media-tw-icon {
+        content: url('../images/icons/icon-twitter.svg');
+    }
+
+    .contact-form-heading {
+        color: $brand-primary;
+        font-family: $font-family-temeraire;
+        font-style: italic;
+    }
+
+    .contact-form-sub-heading {
+        font-family: $font-family-basic;
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        color: $grey;
+    }
+
+    .contact-form-required-fields {
+        color: $grey;
+        font-size: 18px;
+    }
+
+    label {
+        text-transform: uppercase;
+        color: $brand-primary;
+    }
+}

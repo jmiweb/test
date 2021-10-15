@@ -1,0 +1,101 @@
+<?php
+
+/**
+ * @file
+ * Provides the Password Change form in a separate page.
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function change_pwd_page_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#change_pwd_page':
+      $output = '<p>' . t('The Password Separate Form module provides the separate password change form. By default it comes with user account page that little bit confusing for end users. This module would help to provide this form as a separate form to help end users, there is no need to change password fields every time if you are editing some other fields on user account page.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function change_pwd_page_module_implements_alter(&$implementations, $hook) {
+  switch ($hook) {
+    // Move our hook_entity_type_alter() implementation to the end of the list.
+    case 'form_alter':
+      $group = $implementations['change_pwd_page'];
+      unset($implementations['change_pwd_page']);
+      $implementations['change_pwd_page'] = $group;
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Remove the current password field from the user_profile_form form
+ * (user/%/edit).
+ */
+function change_pwd_page_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'user_form') {
+    $url = Url::fromRoute('user.pass');
+    $form['account']['current_pass']['#description'] = t('Required if you want to change the %mail below. <a href=":request_new_url" title="Send password reset instructions via email.">Reset your password</a>.', [
+      '%mail' => $form['account']['mail']['#title'],
+      ':request_new_url' => $url->toString(),
+    ]);
+    // Hide the new password fields.
+    $form['account']['pass']['#access'] = FALSE;
+
+    // Password Policy module adds a validatation handler
+    // We need to remove this if it is present.
+    if (\Drupal::moduleHandler()->moduleExists('password_policy')) {
+      $remove = [];
+      foreach ($form['#validate'] as $i => $name) {
+        if ($name == '_password_policy_user_profile_form_validate') {
+          $remove[] = $i;
+        }
+      }
+      foreach ($remove as $i) {
+        unset($form['#validate'][$i]);
+      }
+    }
+  }
+
+  // Moving the submit handlers from the form to the submit action to mimic
+  // how entity forms handle their submit handlers.
+  if ($form_id == 'change_pwd_form') {
+    $form['actions']['submit']['#submit'] = $form['#submit'];
+    unset($form['#submit']);
+    if (\Drupal::moduleHandler()->moduleExists('password_policy')) {
+      if (_password_policy_show_policy()) {
+        $form['account']['password_policy_status'] = [
+          '#title' => 'Password policies',
+          '#type' => 'table',
+          '#header' => [t('Policy'), t('Status'), t('Constraint')],
+          '#empty' => t('There are no constraints for the selected user roles'),
+          '#weight' => '4',
+          '#prefix' => '<div id="password-policy-status">',
+          '#suffix' => '</div>',
+          '#rows' => \Drupal::service('password_policy.validator')
+            ->buildPasswordPolicyConstraintsTableRows(
+          $form_state->getValue('pass', ''),
+          $form_state->getFormObject()->getEntity(),
+          _password_policy_get_edited_user_roles($form, $form_state)
+          ),
+        ];
+      }
+      $form['#validate'][] = '_password_policy_user_profile_form_validate';
+      $form['#after_build'][] = '_password_policy_user_profile_form_after_build';
+      $form['actions']['submit']['#submit'][] = '_password_policy_user_profile_form_submit';
+    }
+  }
+}
+
+/**
+ * Implements hook_password_policy_form_ids_alter().
+ */
+function change_pwd_page_password_policy_form_ids_alter(&$form_id_list) {
+  $form_id_list[] = 'change_pwd_form';
+}

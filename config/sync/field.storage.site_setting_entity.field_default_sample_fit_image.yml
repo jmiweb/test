@@ -1,0 +1,20 @@
+uuid: c8e59ac5-c6e1-4d35-b5d7-b4b49430bbb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - site_settings
+id: site_setting_entity.field_default_sample_fit_image
+field_name: field_default_sample_fit_image
+entity_type: site_setting_entity
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

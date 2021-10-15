@@ -1,0 +1,15 @@
+diff --git a/modules/payment/src/Entity/Payment.php b/modules/payment/src/Entity/Payment.php
+index 9d26d7d6..18e11dd4 100644
+--- a/modules/payment/src/Entity/Payment.php
++++ b/modules/payment/src/Entity/Payment.php
+@@ -338,7 +338,9 @@ class Payment extends ContentEntityBase implements PaymentInterface {
+     }
+     $payment_order_manager = \Drupal::service('commerce_payment.order_manager');
+     foreach ($orders as $order) {
+-      $payment_order_manager->updateTotalPaid($order);
++      if (!is_null($order)) {
++        $payment_order_manager->updateTotalPaid($order);  
++      }
+     }
+   }
+ 

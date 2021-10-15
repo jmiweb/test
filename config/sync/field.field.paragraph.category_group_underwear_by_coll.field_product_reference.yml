@@ -1,0 +1,28 @@
+uuid: 7260e55f-3687-46f7-865e-4e7a429e2918
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.underwear
+    - field.storage.paragraph.field_product_reference
+    - paragraphs.paragraphs_type.category_group_underwear_by_coll
+id: paragraph.category_group_underwear_by_coll.field_product_reference
+field_name: field_product_reference
+entity_type: paragraph
+bundle: category_group_underwear_by_coll
+label: 'Product Reference'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      underwear: underwear
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

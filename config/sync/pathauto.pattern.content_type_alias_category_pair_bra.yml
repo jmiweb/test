@@ -1,0 +1,23 @@
+uuid: c5e43983-9314-4d58-89a5-b4c975b445ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content_type_alias_category_pair_bra
+label: 'Content Type Alias - Category Pair Bra'
+type: 'canonical_entities:node'
+pattern: 'prod-cat-group/[node:field_prod_collection_ref:entity:name]/[node:field_prod_style_ref:entity:name]'
+selection_criteria:
+  23836d31-47af-44ea-b38a-07e2752065db:
+    id: node_type
+    bundles:
+      category_pair_page_l2_bra: category_pair_page_l2_bra
+      category_pair_page_l2_underwear: category_pair_page_l2_underwear
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 23836d31-47af-44ea-b38a-07e2752065db
+selection_logic: and
+weight: -5
+relationships: {  }

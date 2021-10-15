@@ -1,0 +1,29 @@
+uuid: af646655-0457-4e47-bbd2-a1057583a947
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prod_style_ref
+    - node.type.category_pair_page_l2_bra
+    - taxonomy.vocabulary.bra_style
+id: node.category_pair_page_l2_bra.field_prod_style_ref
+field_name: field_prod_style_ref
+entity_type: node
+bundle: category_pair_page_l2_bra
+label: Style
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bra_style: bra_style
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

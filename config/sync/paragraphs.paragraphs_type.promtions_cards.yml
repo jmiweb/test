@@ -1,0 +1,15 @@
+uuid: 70f1cd7a-dab9-45a1-8c6d-093297a7950b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/soen_theme/assets/paragraph-type-icons/ImageList.png
+id: promtions_cards
+label: 'Promotion Card(s)'
+icon_uuid: null
+icon_default: null
+description: 'Select Promotions to add to the page. They will be displayed in their Reference Card format.'
+behavior_plugins: {  }

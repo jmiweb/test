@@ -1,0 +1,66 @@
+uuid: c3d96945-37b6-4bb9-b6a5-aa2e755e7b87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.content_page
+    - paragraphs.paragraphs_type.contact_form
+    - paragraphs.paragraphs_type.faq_item
+    - paragraphs.paragraphs_type.full_faq_listing
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.promtions_cards
+    - paragraphs.paragraphs_type.simple_text
+    - paragraphs.paragraphs_type.text_banner
+    - paragraphs.paragraphs_type.text_with_image
+  module:
+    - entity_reference_revisions
+id: node.content_page.field_content
+field_name: field_content
+entity_type: node
+bundle: content_page
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text_banner: text_banner
+      simple_text: simple_text
+      text_with_image: text_with_image
+      image: image
+      full_faq_listing: full_faq_listing
+      faq_item: faq_item
+      contact_form: contact_form
+      promtions_cards: promtions_cards
+    target_bundles_drag_drop:
+      contact_form:
+        enabled: true
+        weight: 8
+      faq_item:
+        enabled: true
+        weight: 7
+      full_faq_listing:
+        enabled: true
+        weight: 6
+      image:
+        enabled: true
+        weight: 5
+      promtions_cards:
+        enabled: true
+        weight: 13
+      simple_text:
+        enabled: true
+        weight: 4
+      text_banner:
+        enabled: true
+        weight: 2
+      text_with_image:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions

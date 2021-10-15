@@ -1,0 +1,28 @@
+uuid: efc2aa36-81df-49a5-994e-fb06f439494a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_prod_design_img_main
+    - media.type.image_upload
+    - paragraphs.paragraphs_type.product_design_images
+id: paragraph.product_design_images.field_prod_design_img_main
+field_name: field_prod_design_img_main
+entity_type: paragraph
+bundle: product_design_images
+label: 'Main Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image_upload: image_upload
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

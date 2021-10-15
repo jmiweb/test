@@ -1,0 +1,8 @@
+uuid: 85d61cdb-6c4b-4dd0-a7f1-c22853cce004
+langcode: en
+status: true
+dependencies: {  }
+name: 'Underwear Collection'
+vid: underwear_collection
+description: 'Categorizes Underwear products by Collection'
+weight: 0

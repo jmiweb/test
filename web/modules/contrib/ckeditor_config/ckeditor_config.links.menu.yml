@@ -1,0 +1,4 @@
+ckeditor_config.config_form:
+  title: 'CKEditor custom configuration'
+  route_name: ckeditor_config.config_form
+  parent: system.admin_config_content

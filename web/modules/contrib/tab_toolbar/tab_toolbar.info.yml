@@ -1,0 +1,12 @@
+name: Tabs in Toolbar
+type: module
+description: Moves the tabs into their own toolbar
+core: 8.x
+package: Other
+dependencies:
+  - drupal:toolbar
+
+# Information added by Drupal.org packaging script on 2020-02-25
+version: '8.x-1.0-beta2'
+project: 'tab_toolbar'
+datestamp: 1582628191

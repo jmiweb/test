@@ -1,0 +1,32 @@
+uuid: edb11176-f256-4367-a075-14500e7c8609
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.product_design_images.field_prod_design_img_main
+    - field.field.paragraph.product_design_images.field_prod_design_img_thumbnail
+    - paragraphs.paragraphs_type.product_design_images
+  module:
+    - media_library
+id: paragraph.product_design_images.default
+targetEntityType: paragraph
+bundle: product_design_images
+mode: default
+content:
+  field_prod_design_img_main:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_prod_design_img_thumbnail:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

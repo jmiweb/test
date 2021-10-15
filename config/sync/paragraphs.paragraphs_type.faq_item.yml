@@ -1,0 +1,15 @@
+uuid: c669fdb9-5284-496d-a5f2-b94644a25c83
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/soen_theme/assets/paragraph-type-icons/faqListing.png
+id: faq_item
+label: 'FAQ Item(s) '
+icon_uuid: null
+icon_default: null
+description: 'Select one or multiple FAQ items to insert onto the page.'
+behavior_plugins: {  }

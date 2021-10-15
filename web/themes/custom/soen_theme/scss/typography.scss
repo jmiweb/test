@@ -1,0 +1,26 @@
+/* TYPOGRAPHY */
+
+/* Typekit Fonts */
+
+@import url("https://use.typekit.net/zjf4xng.css");
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-basic: basic-sans, sans-serif;
+$font-family-temeraire: temeraire, serif !default;
+$font-family-base: $font-family-basic;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25;
+$font-size-sm: $font-size-base * .875;
+$font-size-xs: $font-size-base * .75;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+$h1-font-size-h1: $font-size-base * 2.5;
+$h2-font-size-h2: $font-size-base * 2;
+$h3-font-size-h3: $font-size-base * 1.75;
+$h4-font-size-h4: $font-size-base * 1.5;
+$h5-font-size-h5: $font-size-base * 1.25;
+$h6-font-size-h6: $font-size-base;

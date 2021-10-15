@@ -1,0 +1,23 @@
+uuid: dae9562d-28f3-4232-a2b4-286656b68f1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_l1_page_layout
+    - site_settings.site_setting_entity_type.l1_page_content_underwear_by_col
+  module:
+    - options
+id: site_setting_entity.l1_page_content_underwear_by_col.field_l1_page_layout
+field_name: field_l1_page_layout
+entity_type: site_setting_entity
+bundle: l1_page_content_underwear_by_col
+label: Layout
+description: 'Select how "Options" / category cards will be arranged. <br>Each <strong>Category Group</strong> will be displayed together and in the order they are set above. '
+required: true
+translatable: true
+default_value:
+  -
+    value: 3x2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,40 @@
+uuid: ce196930-a2fe-4a48-a86f-4bd77d6c77e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.category_group_bra_by_collection.field_l2_page_reference
+    - field.field.paragraph.category_group_bra_by_collection.field_parent_term
+    - field.field.paragraph.category_group_bra_by_collection.field_product_reference
+    - paragraphs.paragraphs_type.category_group_bra_by_collection
+id: paragraph.category_group_bra_by_collection.default
+targetEntityType: paragraph
+bundle: category_group_bra_by_collection
+mode: default
+content:
+  field_l2_page_reference:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_parent_term:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_product_reference:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  search_api_excerpt: true

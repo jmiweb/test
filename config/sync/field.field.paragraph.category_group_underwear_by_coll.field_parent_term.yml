@@ -1,0 +1,29 @@
+uuid: b9800be9-caec-41d0-a58e-c3818349b79c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_parent_term
+    - paragraphs.paragraphs_type.category_group_underwear_by_coll
+    - taxonomy.vocabulary.underwear_collection
+id: paragraph.category_group_underwear_by_coll.field_parent_term
+field_name: field_parent_term
+entity_type: paragraph
+bundle: category_group_underwear_by_coll
+label: 'Parent Term'
+description: 'Select a category that will represent the parent term for the grouping. '
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      underwear_collection: underwear_collection
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

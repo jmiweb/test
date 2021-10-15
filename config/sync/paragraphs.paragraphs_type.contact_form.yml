@@ -1,0 +1,10 @@
+uuid: 683ef186-af7e-4b99-a0bf-ab6f9b624a47
+langcode: en
+status: true
+dependencies: {  }
+id: contact_form
+label: 'Contact Form'
+icon_uuid: null
+icon_default: null
+description: 'Embed the Contact form on this page'
+behavior_plugins: {  }

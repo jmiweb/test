@@ -1,0 +1,25 @@
+uuid: 18485c22-53c8-4e4e-bb54-085847261755
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.underwear_style.field_listing_splash_image
+    - taxonomy.vocabulary.underwear_style
+id: taxonomy_term.underwear_style.default
+targetEntityType: taxonomy_term
+bundle: underwear_style
+mode: default
+content:
+  field_listing_splash_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  description: true
+  langcode: true
+  search_api_excerpt: true

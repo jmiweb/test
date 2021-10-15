@@ -1,0 +1,29 @@
+uuid: e205f155-6f5a-4e45-b2ee-50116f1462d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_parent_term
+    - paragraphs.paragraphs_type.category_group_underwear_by_fit
+    - taxonomy.vocabulary.underwear_style
+id: paragraph.category_group_underwear_by_fit.field_parent_term
+field_name: field_parent_term
+entity_type: paragraph
+bundle: category_group_underwear_by_fit
+label: 'Parent Term'
+description: 'Select a category that will represent the parent term for the grouping. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      underwear_style: underwear_style
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

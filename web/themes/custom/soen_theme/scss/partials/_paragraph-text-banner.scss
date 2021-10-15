@@ -1,0 +1,111 @@
+.paragraph--type--text-banner {
+    text-align: center;
+    padding: 1rem 1rem 2rem;
+
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 5rem;
+    }
+
+    &.palette {
+        &--plain {
+            background-color: $white;
+            color: $font-color-grey;
+
+            .field--name-field-tb-small-heading:after {
+                background-color: darken($gray-100, 15%);
+            }
+
+            .scroll {
+                background-color: rgba($font-color-grey, 0.7);
+            }
+        }
+        &--emphasis {
+            background-color: $grey-light;
+            color: $font-color-fuscia;
+
+            .scroll {
+                background-color: rgba($brand-primary, 0.7);
+            }
+        }
+
+        &--highlight {
+            background: linear-gradient(90deg, rgba(253,74,92,1) 0%, rgba(255,132,132,1) 100%);
+            color: $white;
+
+            .scroll {
+                background-color: rgba($white, 0.3);
+            }
+        }
+    }
+
+    .field--name-field {
+        &-tb-small-heading {
+            text-transform: uppercase;
+            font-size: 14px;
+            margin: 0;
+
+            &:after {
+                display: block;
+                content: '';
+                width: 50px;
+                height: 3px;
+                margin: 18px auto 24px;
+                background-color: $white;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 36px;
+
+                &:after {
+                    width: 90px;
+                    margin: 47px auto 67px;
+                }
+            }
+        }
+
+        &-tb-headline {
+            font-family: $font-family-temeraire;
+            font-size: 40px;
+            font-style: italic;
+            margin: 0;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 140px;
+            }
+        }
+
+        &-tb-short-caption {
+            text-transform: uppercase;
+            font-size: 12px;
+            margin: 2rem 0 0;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 30px;
+                margin: 4rem 0 0;
+            }
+        }
+    }
+
+    .scroll {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        display: flex;
+        margin: 20px auto 0;
+        justify-content: center;
+
+        img {
+            width: 10px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 50px;
+            height: 50px;
+            margin-top: 42px;
+
+            img {
+                width: 20px;
+            }
+        }
+    }
+}

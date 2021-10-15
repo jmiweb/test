@@ -1,0 +1,10 @@
+uuid: 38daacce-0f9f-4c86-986c-0bf8078bd8cd
+langcode: en
+status: true
+dependencies: {  }
+id: product_design_images
+label: 'Product Design Images'
+icon_uuid: null
+icon_default: null
+description: 'Add product images'
+behavior_plugins: {  }

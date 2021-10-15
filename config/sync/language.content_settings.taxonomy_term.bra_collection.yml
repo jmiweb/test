@@ -1,0 +1,16 @@
+uuid: 54a5c277-097a-40c6-b9bf-f6026c1b4927
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.bra_collection
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.bra_collection
+target_entity_type_id: taxonomy_term
+target_bundle: bra_collection
+default_langcode: site_default
+language_alterable: false

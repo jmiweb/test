@@ -1,0 +1,23 @@
+uuid: 96e76e06-c1eb-4a3a-b8ae-fae204d64c48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_number_to_display
+    - site_settings.site_setting_entity_type.main_page_ribbon_content
+  module:
+    - options
+id: site_setting_entity.main_page_ribbon_content.field_number_to_display
+field_name: field_number_to_display
+entity_type: site_setting_entity
+bundle: main_page_ribbon_content
+label: 'Number to Display'
+description: '(Not Used Yet)'
+required: true
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

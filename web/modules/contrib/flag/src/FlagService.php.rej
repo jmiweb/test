@@ -1,0 +1,17 @@
+***************
+*** 98,104 ****
+      // type-hint check.
+  
+      // Get the current user if the account is NULL.
+-     if ($account == NULL) {
+        $account = $this->currentUser;
+  
+        // If the user is anonymous, get the session ID.
+--- 98,104 ----
+      // type-hint check.
+  
+      // Get the current user if the account is NULL.
++     if ($account == NULL || $session_id == NULL) {
+        $account = $this->currentUser;
+  
+        // If the user is anonymous, get the session ID.

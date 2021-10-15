@@ -1,0 +1,23 @@
+uuid: 02d70d18-af4e-40e2-a9f9-ae21c9cd57aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_instagram_page_url
+    - site_settings.site_setting_entity_type.contact_form_info
+  module:
+    - link
+id: site_setting_entity.contact_form_info.field_instagram_page_url
+field_name: field_instagram_page_url
+entity_type: site_setting_entity
+bundle: contact_form_info
+label: 'Instagram Page/URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

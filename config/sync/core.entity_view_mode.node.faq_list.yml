@@ -1,0 +1,10 @@
+uuid: a2c323a9-7ad8-410d-b75c-873263f20797
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.faq_list
+label: 'FAQ List'
+targetEntityType: node
+cache: true

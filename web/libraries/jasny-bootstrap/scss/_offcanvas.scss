@@ -1,0 +1,68 @@
+// Off canvas navigation
+// --------------------------------------------------
+
+@mixin offcanvas {
+  display: none;
+  &.in {
+    display: block;
+  }
+}
+
+.offcanvas {
+  @include offcanvas;
+}
+
+@include media-breakpoint-down('xs') {
+  .offcanvas-xs {
+    @include offcanvas;
+  }
+}
+@include media-breakpoint-down('sm') {
+  .offcanvas-sm {
+    @include offcanvas;
+  }
+}
+@include media-breakpoint-down('md') {
+  .offcanvas-md {
+    @include offcanvas;
+  }
+}
+@include media-breakpoint-down('lg') {
+  .offcanvas-lg {
+    @include offcanvas;
+  }
+}
+.offcanvas-xl {
+  @include offcanvas;
+}
+
+.canvas-sliding {
+  transition: top 0.35s, left 0.35s, bottom 0.35s, right 0.35s;
+}
+
+.offcanvas-clone {
+  height: 0px !important;
+  width: 0px !important;
+  overflow: hidden !important;
+  border: none !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  position: absolute !important;
+  top: auto !important;
+  left: auto !important;
+  bottom: 0px !important;
+  right: 0px !important;
+  opacity: 0 !important;
+}
+
+.modal-backdrop.allow-navbar {
+  z-index: 1029;
+}
+
+.limit-backdrop {
+  overflow: hidden!important;
+
+  .modal-backdrop {
+    position: absolute;
+  }
+}

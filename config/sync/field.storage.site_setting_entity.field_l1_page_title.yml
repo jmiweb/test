@@ -1,0 +1,21 @@
+uuid: 5d82a4af-7a78-400b-a466-af58b72a8dfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - site_settings
+id: site_setting_entity.field_l1_page_title
+field_name: field_l1_page_title
+entity_type: site_setting_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

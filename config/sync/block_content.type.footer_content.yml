@@ -1,0 +1,8 @@
+uuid: 18847be4-eb43-486e-81e5-7e2b2bd23253
+langcode: en
+status: true
+dependencies: {  }
+id: footer_content
+label: 'Footer Content'
+revision: 0
+description: 'Allows content/site admin to add content. For use in the footer regions'

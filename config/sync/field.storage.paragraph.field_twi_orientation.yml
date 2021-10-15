@@ -1,0 +1,27 @@
+uuid: a946d861-52e3-47fc-b6a5-8a78a82ddfe3
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_twi_orientation
+field_name: field_twi_orientation
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: image-left
+      label: 'Image Left'
+    -
+      value: image-right
+      label: 'Image Right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

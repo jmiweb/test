@@ -1,0 +1,25 @@
+uuid: c68b23d8-51a0-45ba-8895-81ca621d2347
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.bra_style.field_listing_splash_image
+    - taxonomy.vocabulary.bra_style
+id: taxonomy_term.bra_style.default
+targetEntityType: taxonomy_term
+bundle: bra_style
+mode: default
+content:
+  field_listing_splash_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  description: true
+  langcode: true
+  search_api_excerpt: true

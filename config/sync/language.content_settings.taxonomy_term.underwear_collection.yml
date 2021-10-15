@@ -1,0 +1,16 @@
+uuid: 64a5a720-c169-4d02-b943-790136da9c4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.underwear_collection
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.underwear_collection
+target_entity_type_id: taxonomy_term
+target_bundle: underwear_collection
+default_langcode: site_default
+language_alterable: false

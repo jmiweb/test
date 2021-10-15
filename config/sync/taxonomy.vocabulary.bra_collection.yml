@@ -1,0 +1,8 @@
+uuid: ae3c4f25-bdbd-4dff-a3bc-98c9cc93d567
+langcode: en
+status: true
+dependencies: {  }
+name: 'Bra Collection'
+vid: bra_collection
+description: 'Categorizes Bra products by Collection'
+weight: 0

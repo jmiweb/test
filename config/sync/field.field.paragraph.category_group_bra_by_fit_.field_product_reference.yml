@@ -1,0 +1,28 @@
+uuid: ea186ea9-786a-412a-a1d5-947d73d10efc
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.bra
+    - field.storage.paragraph.field_product_reference
+    - paragraphs.paragraphs_type.category_group_bra_by_fit_
+id: paragraph.category_group_bra_by_fit_.field_product_reference
+field_name: field_product_reference
+entity_type: paragraph
+bundle: category_group_bra_by_fit_
+label: 'Product Reference'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      bra: bra
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

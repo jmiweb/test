@@ -1,0 +1,9 @@
+name: Soen Global
+description: Houses custom implementation for Soen web portal.
+package: Soen
+
+type: module
+core: 8.x
+
+libraries:
+  - soen_global/l1-theming

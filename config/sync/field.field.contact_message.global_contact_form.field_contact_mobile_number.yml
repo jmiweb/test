@@ -1,0 +1,21 @@
+uuid: a8d0e20e-1038-49e9-8461-933ba2006d01
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.global_contact_form
+    - field.storage.contact_message.field_contact_mobile_number
+  module:
+    - telephone
+id: contact_message.global_contact_form.field_contact_mobile_number
+field_name: field_contact_mobile_number
+entity_type: contact_message
+bundle: global_contact_form
+label: 'Mobile Number'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

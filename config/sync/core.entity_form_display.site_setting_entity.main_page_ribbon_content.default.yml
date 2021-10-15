@@ -1,0 +1,83 @@
+uuid: cfc6b873-7eb5-4ca4-be4d-a2c0eefbb511
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.main_page_ribbon_content.field_number_to_display
+    - field.field.site_setting_entity.main_page_ribbon_content.field_ribbon_message
+    - site_settings.site_setting_entity_type.main_page_ribbon_content
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - field_ribbon_message
+        - field_number_to_display
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Set the contents of the top ribbon area'
+        required_fields: true
+        open: false
+      label: Content
+id: site_setting_entity.main_page_ribbon_content.default
+targetEntityType: site_setting_entity
+bundle: main_page_ribbon_content
+mode: default
+content:
+  field_number_to_display:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ribbon_message:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 255
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+    type: string_textfield
+    region: content
+  fieldset:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

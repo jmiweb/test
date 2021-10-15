@@ -1,0 +1,19 @@
+uuid: 747c8a72-2458-4a50-9074-b991cc5f815c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.bra
+    - field.storage.commerce_product.field_product_page_material_desc
+id: commerce_product.bra.field_product_page_material_desc
+field_name: field_product_page_material_desc
+entity_type: commerce_product
+bundle: bra
+label: 'Material Description'
+description: 'Describe what material is used for this product. '
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

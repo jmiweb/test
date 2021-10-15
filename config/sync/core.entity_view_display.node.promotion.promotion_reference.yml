@@ -1,0 +1,28 @@
+uuid: 22a72a37-de85-45ee-9534-d26a11da8229
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.promotion_reference
+    - field.field.node.promotion.field_promo_splash_card_image
+    - node.type.promotion
+  module:
+    - user
+id: node.promotion.promotion_reference
+targetEntityType: node
+bundle: promotion
+mode: promotion_reference
+content:
+  field_promo_splash_card_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

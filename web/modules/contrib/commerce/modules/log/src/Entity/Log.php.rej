@@ -1,0 +1,22 @@
+***************
+*** 113,119 ****
+     * {@inheritdoc}
+     */
+    public function getParams() {
+-     return $this->get('params')->first()->getValue();
+    }
+  
+    /**
+--- 113,124 ----
+     * {@inheritdoc}
+     */
+    public function getParams() {
++     if (!$this->get('params')->isEmpty()) {
++       return $this->get('params')->first()->getValue();
++     }
++     else {
++       return [];
++     }
+    }
+  
+    /**

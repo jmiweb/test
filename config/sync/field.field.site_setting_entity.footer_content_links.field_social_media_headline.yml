@@ -1,0 +1,19 @@
+uuid: 515e0172-1278-4c00-af4a-86d4c5211cd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_social_media_headline
+    - site_settings.site_setting_entity_type.footer_content_links
+id: site_setting_entity.footer_content_links.field_social_media_headline
+field_name: field_social_media_headline
+entity_type: site_setting_entity
+bundle: footer_content_links
+label: 'Social Media Headline'
+description: 'Title/headline text for the social media links section of the footer'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

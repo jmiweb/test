@@ -1,0 +1,20 @@
+uuid: 60021575-6e6e-454d-b9cc-f02d720b0aaf
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - taxonomy
+id: commerce_product.field_b_style_ref
+field_name: field_b_style_ref
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

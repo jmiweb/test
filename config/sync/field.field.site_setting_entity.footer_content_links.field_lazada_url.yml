@@ -1,0 +1,23 @@
+uuid: 19ad9136-5785-4db4-b908-dc65f429fa21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_lazada_url
+    - site_settings.site_setting_entity_type.footer_content_links
+  module:
+    - link
+id: site_setting_entity.footer_content_links.field_lazada_url
+field_name: field_lazada_url
+entity_type: site_setting_entity
+bundle: footer_content_links
+label: 'Lazada URL'
+description: 'Enter the URL for the Lazada store'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

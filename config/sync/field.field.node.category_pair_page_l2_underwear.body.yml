@@ -1,0 +1,23 @@
+uuid: c725fea7-79dc-442b-b8d5-52f77aaa4ad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.category_pair_page_l2_underwear
+  module:
+    - text
+id: node.category_pair_page_l2_underwear.body
+field_name: body
+entity_type: node
+bundle: category_pair_page_l2_underwear
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

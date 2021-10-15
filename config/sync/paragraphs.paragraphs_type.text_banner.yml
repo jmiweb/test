@@ -1,0 +1,10 @@
+uuid: 7f8c4da7-482f-4944-a808-b1d5c545f629
+langcode: en
+status: true
+dependencies: {  }
+id: text_banner
+label: 'Text Banner'
+icon_uuid: null
+icon_default: null
+description: 'Stylized text on a background gradient'
+behavior_plugins: {  }

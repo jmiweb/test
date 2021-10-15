@@ -1,0 +1,21 @@
+uuid: fbe080e1-e10b-450f-8b45-7426fc3f9d7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promotion_title_heading
+    - paragraphs.paragraphs_type.promtions_cards
+id: paragraph.promtions_cards.field_promotion_title_heading
+field_name: field_promotion_title_heading
+entity_type: paragraph
+bundle: promtions_cards
+label: 'Title / Heading'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Promotions
+default_value_callback: ''
+settings: {  }
+field_type: string

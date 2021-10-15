@@ -1,0 +1,18 @@
+uuid: 83af05a7-52ce-4f15-9793-f61eb05408f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Prod Category Pair Overview Page (L2) - Bra'
+type: category_pair_page_l2_bra
+description: 'Create a page that has content related to a Category + Style term combination. This is specific to the Bra product type. '
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

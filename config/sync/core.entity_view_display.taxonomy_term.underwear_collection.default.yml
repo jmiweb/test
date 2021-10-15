@@ -1,0 +1,25 @@
+uuid: 8198e29b-04ca-465b-a462-9a16da5547b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.underwear_collection.field_listing_splash_image
+    - taxonomy.vocabulary.underwear_collection
+id: taxonomy_term.underwear_collection.default
+targetEntityType: taxonomy_term
+bundle: underwear_collection
+mode: default
+content:
+  field_listing_splash_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  description: true
+  langcode: true
+  search_api_excerpt: true

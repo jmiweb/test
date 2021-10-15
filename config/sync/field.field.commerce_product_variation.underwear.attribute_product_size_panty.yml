@@ -1,0 +1,24 @@
+uuid: 085f6aec-93d5-4445-ae82-cc73a3453c36
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.product_size_panty
+    - commerce_product.commerce_product_variation_type.underwear
+    - field.storage.commerce_product_variation.attribute_product_size_panty
+id: commerce_product_variation.underwear.attribute_product_size_panty
+field_name: attribute_product_size_panty
+entity_type: commerce_product_variation
+bundle: underwear
+label: Size
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product_attribute_value'
+  handler_settings:
+    target_bundles:
+      - product_size_panty
+field_type: entity_reference

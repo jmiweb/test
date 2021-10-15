@@ -1,0 +1,16 @@
+uuid: e78fe2a7-20fb-45ce-8497-86c9b92f7590
+langcode: en
+status: true
+dependencies: {  }
+id: shared_prod
+label: 'Shared Prod'
+description: ''
+folder: ../config/split/shared_prod
+module:
+  dblog: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

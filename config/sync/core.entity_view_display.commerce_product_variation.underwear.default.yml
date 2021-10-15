@@ -1,0 +1,74 @@
+uuid: e99f291e-ea35-45b8-a4ca-5370ef7ae6fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.underwear
+    - field.field.commerce_product_variation.underwear.attribute_product_size_panty
+    - field.field.commerce_product_variation.underwear.field_buy_now_link_lazada
+    - field.field.commerce_product_variation.underwear.field_buy_now_link_shopee
+    - field.field.commerce_product_variation.underwear.field_pv_quantity_label
+  module:
+    - commerce_price
+    - link
+id: commerce_product_variation.underwear.default
+targetEntityType: commerce_product_variation
+bundle: underwear
+mode: default
+content:
+  field_buy_now_link_lazada:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_buy_now_link_shopee:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_pv_quantity_label:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  list_price:
+    type: commerce_price_default
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+  sku:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  attribute_product_size_panty: true
+  langcode: true
+  price: true
+  product_id: true
+  search_api_excerpt: true
+  title: true

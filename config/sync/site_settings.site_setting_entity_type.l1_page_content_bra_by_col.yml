@@ -1,0 +1,8 @@
+uuid: 294c42ff-055b-479c-8513-29018614c2ec
+langcode: en
+status: true
+dependencies: {  }
+id: l1_page_content_bra_by_col
+label: 'Bra Categories - By Collection Page'
+fieldset: 'Level One Page Content'
+multiple: false

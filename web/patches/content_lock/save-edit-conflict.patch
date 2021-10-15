@@ -1,0 +1,13 @@
+diff --git a/content_lock.module b/content_lock.module
+index 18ada93..dfe2fe0 100644
+--- a/content_lock.module
++++ b/content_lock.module
+@@ -121,7 +121,7 @@ function content_lock_form_alter(&$form, FormStateInterface $form_state, $form_i
+       $form['#disabled'] = TRUE;
+ 
+       // Do not allow deletion, publishing, or unpublishing if locked.
+-      foreach (['delete', 'publish', 'unpublish'] as $key) {
++      foreach (['delete', 'publish', 'unpublish', 'save_edit'] as $key) {
+         if (isset($form['actions'][$key])) {
+           unset($form['actions'][$key]);
+         }

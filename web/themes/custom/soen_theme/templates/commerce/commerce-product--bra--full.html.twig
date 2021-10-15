@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div{{ attributes }} class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-3 pl-0">
+      {{ product.field_product_page_fit_image }}
+    </div>
+    <div class="col-12 col-lg-9 py-3">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <div class="product--full-image">
+
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 d-flex flex-column">
+          <div class="product--details order-2 order-md-1">
+            <a href="javascript:window.history.back();" class="product--back-link">&lt; {{ "Back"|t }}</a>
+            <div class="product--item-code"><span>{{ "Item Code: "|t }}</span>{{ product.field_product_prefix }}</div>
+            {{ product.field_product_page_display_label }}
+            {{ product.field_product_page_material_desc }}
+            {{ product.field_product_page_package_ops }}
+            {{ product.field_product_page_price_label }}
+            {{ product.field_product_page_features }}
+            <a type="button" class="product--size-chart pb-3" data-toggle="modal" data-target=".size-chart-modal">{{ "View Size Chart"|t }}</a>
+
+            <div class="modal fade size-chart-modal" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">{{ "Size Chart"|t }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    {{ product.field_product_page_size_chart_fi }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 order-md-2">{{ product.field_product_page_design_images }}</div>
+          <div class="order-3">
+            <div class="variation-labels pt-3">{{ product.variations }}</div>
+            <div class="variation-links">{{ product.variations }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

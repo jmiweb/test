@@ -1,0 +1,11 @@
+uuid: 7a870f46-c983-4b54-b4a6-554589c476e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image_upload
+id: media.image_upload
+target_entity_type_id: media
+target_bundle: image_upload
+default_langcode: site_default
+language_alterable: false

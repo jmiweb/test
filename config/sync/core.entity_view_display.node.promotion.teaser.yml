@@ -1,0 +1,24 @@
+uuid: 9f9cfb22-e6b6-43c1-87ea-ba54919657bb
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.promotion.field_promo_splash_card_image
+    - node.type.promotion
+  module:
+    - user
+id: node.promotion.teaser
+targetEntityType: node
+bundle: promotion
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_promo_splash_card_image: true
+  langcode: true
+  search_api_excerpt: true

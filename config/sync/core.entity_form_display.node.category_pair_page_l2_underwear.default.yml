@@ -1,0 +1,125 @@
+uuid: 966b830a-591c-441a-8758-b82384e9732f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.category_pair_page_l2_underwear.body
+    - field.field.node.category_pair_page_l2_underwear.field_prod_collection_ref
+    - field.field.node.category_pair_page_l2_underwear.field_prod_style_ref
+    - node.type.category_pair_page_l2_underwear
+  module:
+    - field_group
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_categorize:
+      children:
+        - field_prod_collection_ref
+        - field_prod_style_ref
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: 'Set the categories that apply to this page. <br/>Products tagged/categorized with the exact same pair of terms will be displayed as part of this page. <br/>The product''s "teaser/L2 page view" field values will be used. '
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Categorize
+id: node.category_pair_page_l2_underwear.default
+targetEntityType: node
+bundle: category_pair_page_l2_underwear
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_prod_collection_ref:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_prod_style_ref:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 11
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

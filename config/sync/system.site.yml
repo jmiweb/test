@@ -1,0 +1,14 @@
+uuid: dd7496e0-fd37-4376-ae8e-dfe2c4b01dc2
+name: 'SOEN WebPortal'
+mail: admin@mail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

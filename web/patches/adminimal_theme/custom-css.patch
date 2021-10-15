@@ -1,0 +1,69 @@
+diff --git a/adminimal_theme.theme b/adminimal_theme.theme
+index af000e3..dc08d7c 100644
+--- a/adminimal_theme.theme
++++ b/adminimal_theme.theme
+@@ -43,17 +43,29 @@ function adminimal_theme_form_system_theme_settings_alter(&$form, \Drupal\Core\F
+   global $base_url;
+   $adminimal_path = drupal_get_path('theme', 'adminimal_theme');
+   $old_css_path = $adminimal_path . '/css/custom.css';
++  $override_directory = theme_get_setting('custom_css_directory');
++  $override_file_path = $override_directory . '/adminimal-custom.css';
+   $custom_css_path = 'public://adminimal-custom.css';
+   $custom_css_dir = str_replace($base_url . '/', "", file_create_url($custom_css_path));
+   $custom_css_url = file_create_url($custom_css_path);
+ 
++  $rebuild_file = theme_get_setting('custom_css_rebuild');
++
+   // Try to create the adminimal-custom.css file automatically.
+-  if (!file_exists($custom_css_path)) {
++  if (!file_exists($custom_css_path) || $rebuild_file ) {
++    $replace = FILE_EXISTS_ERROR;
++    if ($rebuild_file) {
++      $replace = FILE_EXISTS_REPLACE;
++    } 
+ 
+     // Try to migrate from the old css.
+     if (file_exists($old_css_path)) {
+       file_unmanaged_copy($old_css_path, $custom_css_path, FILE_EXISTS_ERROR);
+     }
++    // Check if theres something in override directory, copy it over
++    elseif (!empty($override_directory) && file_exists($override_file_path)){
++      file_unmanaged_copy($override_file_path, $custom_css_path, $replace);
++    }
+     // Else create a new blank css file.
+     else {
+       file_unmanaged_save_data("", $custom_css_path, FILE_EXISTS_ERROR);
+@@ -79,6 +91,27 @@ function adminimal_theme_form_system_theme_settings_alter(&$form, \Drupal\Core\F
+     '#default_value' => theme_get_setting('custom_css'),
+   ];
+ 
++  $form['adminimal_custom']['custom_css_rebuild'] = [
++    '#type' => 'checkbox',
++    '#title' => t('Rebuild custom css file'),
++    '#description' => t('Generate a new/blank "adminimal-custom.css" file or copy one from the specified directory'),
++    '#default_value' => theme_get_setting('custom_css_rebuild'),
++    '#weight' => 100,
++  ];
++
++  $form['adminimal_custom']['custom_css_directory'] = [
++    '#type' => 'textfield',
++    '#title' => t('Override Directory'),
++    '#description' => t('Include custom css file from a specific directory (default is public files location). Do not include trailing slash.<br/> A file named "adminimal-custom.css" must exist in the directory specified'),
++    '#default_value' => theme_get_setting('custom_css_directory'),
++    '#states' => [
++      // Hide the settings when the cancel notify checkbox is disabled.
++      'visible' => [
++        ':input[name="custom_css"]' => ['checked' => TRUE],
++      ], 
++    ],   
++  ];
++
+   $form['adminimal_custom']['adminimal_custom_check'] = [
+     '#type' => 'fieldset',
+     '#title' => t('Custom CSS file check'),
+@@ -126,4 +159,5 @@ function adminimal_theme_form_system_theme_settings_alter(&$form, \Drupal\Core\F
+     '#default_value' => theme_get_setting('disable_google_fonts'),
+     '#description' => t('Useful for languages that are not well supported by the "Open sans" font. Like Japanese for example.'),
+   ];
++
+ }

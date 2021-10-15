@@ -1,0 +1,67 @@
+uuid: d4ff5e90-5e57-48bf-bf01-9b7c8bb3f3cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_l1_category_content
+    - paragraphs.paragraphs_type.category_group_underwear_by_fit
+    - site_settings.site_setting_entity_type.l1_page_content_underwear_by_fit
+  module:
+    - entity_reference_revisions
+id: site_setting_entity.l1_page_content_underwear_by_fit.field_l1_category_content
+field_name: field_l1_category_content
+entity_type: site_setting_entity
+bundle: l1_page_content_underwear_by_fit
+label: Options
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      category_group_underwear_by_fit: category_group_underwear_by_fit
+    target_bundles_drag_drop:
+      category_group_bra_by_collection:
+        weight: 14
+        enabled: false
+      category_group_bra_by_fit_:
+        weight: 15
+        enabled: false
+      category_group_underwear_by_coll:
+        weight: 16
+        enabled: false
+      category_group_underwear_by_fit:
+        enabled: true
+        weight: 11
+      contact_form:
+        weight: 11
+        enabled: false
+      faq_item:
+        weight: 12
+        enabled: false
+      full_faq_listing:
+        weight: 13
+        enabled: false
+      image:
+        weight: 14
+        enabled: false
+      product_design_images:
+        weight: 16
+        enabled: false
+      promtions_cards:
+        weight: 17
+        enabled: false
+      simple_text:
+        weight: 18
+        enabled: false
+      text_banner:
+        weight: 19
+        enabled: false
+      text_with_image:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

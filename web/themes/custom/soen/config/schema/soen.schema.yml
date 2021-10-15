@@ -1,0 +1,3 @@
+soen.settings:
+  type: bs_bootstrap.settings
+  label: 'So-en settings'

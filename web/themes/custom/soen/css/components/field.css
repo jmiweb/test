@@ -1,0 +1,24 @@
+body {
+  background-color: blue;
+}
+
+.field__label {
+  font-weight: bold;
+}
+
+@media (min-width: 576px) {
+  .field--label-inline {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .field--label-inline .field__label {
+    padding-right: 1ch;
+  }
+  .field--label-inline .field__label::after {
+    content: ":";
+  }
+}

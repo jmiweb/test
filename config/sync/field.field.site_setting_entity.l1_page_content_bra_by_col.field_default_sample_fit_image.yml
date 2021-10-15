@@ -1,0 +1,28 @@
+uuid: 0826b069-eef9-4eeb-889f-722eab1ed8e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_default_sample_fit_image
+    - media.type.image_upload
+    - site_settings.site_setting_entity_type.l1_page_content_bra_by_col
+id: site_setting_entity.l1_page_content_bra_by_col.field_default_sample_fit_image
+field_name: field_default_sample_fit_image
+entity_type: site_setting_entity
+bundle: l1_page_content_bra_by_col
+label: 'Default Sample Fit Image'
+description: 'Upload the default sample fit image that is used when the page is first loaded with no pre-selected option. '
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image_upload: image_upload
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

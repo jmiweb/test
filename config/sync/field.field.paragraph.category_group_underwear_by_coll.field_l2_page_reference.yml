@@ -1,0 +1,28 @@
+uuid: e7bb9de1-987d-4595-894c-a7a9a560e810
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_l2_page_reference
+    - node.type.category_pair_page_l2_underwear
+    - paragraphs.paragraphs_type.category_group_underwear_by_coll
+id: paragraph.category_group_underwear_by_coll.field_l2_page_reference
+field_name: field_l2_page_reference
+entity_type: paragraph
+bundle: category_group_underwear_by_coll
+label: 'L2 Page Reference'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      category_pair_page_l2_underwear: category_pair_page_l2_underwear
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

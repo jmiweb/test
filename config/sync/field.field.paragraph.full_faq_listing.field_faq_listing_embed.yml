@@ -1,0 +1,61 @@
+uuid: b80ba24a-e7f1-4d12-8ab3-e97c53830611
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faq_listing_embed
+    - paragraphs.paragraphs_type.full_faq_listing
+    - views.view.faq_listing
+  module:
+    - viewsreference
+id: paragraph.full_faq_listing.field_faq_listing_embed
+field_name: field_faq_listing_embed
+entity_type: paragraph
+bundle: full_faq_listing
+label: Listing
+description: "<strong>USAGE:</strong> Ensure \"FAQ Listing\" and \"Paragraph Embed\" as the Display ID value as selected. <br /><br /> \r\nThis component will display all FAQ Item nodes with ability to filter by Category."
+required: true
+translatable: false
+default_value:
+  -
+    options:
+      title: 0
+      argument: ''
+    display_id: block_1
+    argument: null
+    title: 0
+    data: null
+    target_uuid: 70d26360-e7fd-489f-a666-cab512c682e0
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+    entity_browser: 0
+  preselect_views:
+    faq_listing: faq_listing
+    admin_listing_placeholder: 0
+    block_content: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    locked_content: 0
+    media: 0
+    media_entity_browser: 0
+    media_entity_browser_media_library: 0
+    media_library: 0
+    redirect: 0
+    redirect_404: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

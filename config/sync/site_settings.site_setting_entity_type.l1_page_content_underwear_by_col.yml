@@ -1,0 +1,8 @@
+uuid: 8c0066e5-2e88-40f7-a428-108d08abffd1
+langcode: en
+status: true
+dependencies: {  }
+id: l1_page_content_underwear_by_col
+label: 'Underwear Categories - By Collection Page'
+fieldset: 'Level One Page Content'
+multiple: false

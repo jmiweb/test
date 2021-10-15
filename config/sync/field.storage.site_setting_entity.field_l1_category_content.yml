@@ -1,0 +1,21 @@
+uuid: 6b5f0f1b-8f1f-4424-8237-29157ca3c70a
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - site_settings
+id: site_setting_entity.field_l1_category_content
+field_name: field_l1_category_content
+entity_type: site_setting_entity
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

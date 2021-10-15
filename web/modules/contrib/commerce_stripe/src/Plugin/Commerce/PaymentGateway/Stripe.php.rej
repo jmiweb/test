@@ -1,0 +1,88 @@
+***************
+*** 207,214 ****
+      $transaction_data['metadata'] += $event->getMetadata();
+  
+      $owner = $payment_method->getOwner();
+-     if ($owner && $owner->isAuthenticated()) {
+-       $transaction_data['customer'] = $this->getRemoteCustomerId($owner);
+      }
+  
+      try {
+--- 208,217 ----
+      $transaction_data['metadata'] += $event->getMetadata();
+  
+      $owner = $payment_method->getOwner();
++     $transaction_data['customer'] = $this->getRemoteCustomerId($owner, $payment->getOrder()->getEmail());
++     if ($owner && empty($transaction_data['customer']) && $this->getSetTempCustomerId()) { // no permanent customer id yet, check temp
++       $transaction_data['customer'] = $this->getSetTempCustomerId();
++       $this->setRemoteCustomerId($owner, $customer->id); // persist to avoid calls to stripe for the recurring payments
+      }
+  
+      try {
+***************
+*** 381,389 ****
+      $customer_id = NULL;
+      $customer_data = [];
+      if ($owner && $owner->isAuthenticated()) {
+-       $customer_id = $this->getRemoteCustomerId($owner);
+        $customer_data['email'] = $owner->getEmail();
+      }
+  
+      if ($customer_id) {
+        // If the customer id already exists, use the Stripe form token to create the new card.
+--- 384,398 ----
+      $customer_id = NULL;
+      $customer_data = [];
+      if ($owner && $owner->isAuthenticated()) {
+        $customer_data['email'] = $owner->getEmail();
+      }
++     else if (!empty($payment_details['email'])) {
++       $customer_data['email'] = $payment_details['email'];
++       if ($account = user_load_by_mail($customer_data['email'])) { // anonymous user has an existing account
++         $owner = $account;
++       }
++     }
++     $customer_id = $this->getRemoteCustomerId($owner, $payment_details['email']);
+  
+      if ($customer_id) {
+        // If the customer id already exists, use the Stripe form token to create the new card.
+***************
+*** 397,414 ****
+          ErrorHelper::handleException($e);
+        }
+      }
+-     elseif ($owner && $owner->isAuthenticated()) {
+        // Create both the customer and the payment method.
+        try {
+          $customer = \Stripe\Customer::create([
+-           'email' => $owner->getEmail(),
+-           'description' => $this->t('Customer for :mail', [':mail' => $owner->getEmail()]),
+            'source' => $payment_details['stripe_token'],
+-         ]);
+          $cards = \Stripe\Customer::retrieve($customer->id)->sources->all(['object' => 'card']);
+          $cards_array = \Stripe\Util\Util::convertStripeObjectToArray([$cards]);
+          $this->setRemoteCustomerId($owner, $customer->id);
+-         $owner->save();
+          foreach ($cards_array[0]['data'] as $card) {
+            return $card;
+          }
+--- 406,424 ----
+          ErrorHelper::handleException($e);
+        }
+      }
++     elseif (!empty($customer_data['email'])) {
+        // Create both the customer and the payment method.
+        try {
++         \Drupal::logger('commerce_stripe')->notice('Create customer and add payment for ' . $customer_data['email']);      
+          $customer = \Stripe\Customer::create([
++           'email' => $customer_data['email'],
++           'description' => $this->t('Customer for :mail', [':mail' => $customer_data['email']]),
+            'source' => $payment_details['stripe_token'],
++         ]);  
+          $cards = \Stripe\Customer::retrieve($customer->id)->sources->all(['object' => 'card']);
+          $cards_array = \Stripe\Util\Util::convertStripeObjectToArray([$cards]);
+          $this->setRemoteCustomerId($owner, $customer->id);
++         $this->getSetTempCustomerId($customer->id); // store temporarily so that we can complete order (before user creation)
+          foreach ($cards_array[0]['data'] as $card) {
+            return $card;
+          }

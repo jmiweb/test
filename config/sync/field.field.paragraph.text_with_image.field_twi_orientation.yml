@@ -1,0 +1,23 @@
+uuid: 3accbcc3-8bd0-46c0-9d48-96e2d2b440e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_twi_orientation
+    - paragraphs.paragraphs_type.text_with_image
+  module:
+    - options
+id: paragraph.text_with_image.field_twi_orientation
+field_name: field_twi_orientation
+entity_type: paragraph
+bundle: text_with_image
+label: Orientation
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: image-left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

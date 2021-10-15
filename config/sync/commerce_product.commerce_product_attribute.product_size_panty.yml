@@ -1,0 +1,7 @@
+uuid: 29bb41f1-75ea-4b5c-bd70-946b6e729d60
+langcode: en
+status: true
+dependencies: {  }
+id: product_size_panty
+label: Size
+elementType: select

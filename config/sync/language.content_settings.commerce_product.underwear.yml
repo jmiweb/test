@@ -1,0 +1,16 @@
+uuid: 82cdc744-42f9-436d-bd84-a968696c46f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.underwear
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: commerce_product.underwear
+target_entity_type_id: commerce_product
+target_bundle: underwear
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,29 @@
+uuid: 8c51d87d-87fb-4e60-99a7-09496af61eb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prod_collection_ref
+    - node.type.category_pair_page_l2_bra
+    - taxonomy.vocabulary.bra_collection
+id: node.category_pair_page_l2_bra.field_prod_collection_ref
+field_name: field_prod_collection_ref
+entity_type: node
+bundle: category_pair_page_l2_bra
+label: Collection
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bra_collection: bra_collection
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

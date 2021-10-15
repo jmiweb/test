@@ -1,0 +1,16 @@
+uuid: 07c4a640-e0a0-4e0f-aaff-89246fca74a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.category_pair_page_l2_bra
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.category_pair_page_l2_bra
+target_entity_type_id: node
+target_bundle: category_pair_page_l2_bra
+default_langcode: site_default
+language_alterable: false

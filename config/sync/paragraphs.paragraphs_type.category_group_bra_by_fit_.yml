@@ -1,0 +1,10 @@
+uuid: d0b8737c-a87a-4ac2-93fe-e051f517c734
+langcode: en
+status: true
+dependencies: {  }
+id: category_group_bra_by_fit_
+label: 'Category Group (Bra - by fit)'
+icon_uuid: null
+icon_default: null
+description: 'Content for Level1 (L1) page'
+behavior_plugins: {  }

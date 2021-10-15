@@ -1,0 +1,16 @@
+uuid: 4eaa3863-43a1-4283-bed2-f18deb479310
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.bra
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: commerce_product.bra
+target_entity_type_id: commerce_product
+target_bundle: bra
+default_langcode: site_default
+language_alterable: false

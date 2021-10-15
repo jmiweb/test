@@ -1,0 +1,34 @@
+uuid: 5accf253-510b-4f41-9b06-77c37c2d3644
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.category_pair_page_l2_underwear.body
+    - field.field.node.category_pair_page_l2_underwear.field_prod_collection_ref
+    - field.field.node.category_pair_page_l2_underwear.field_prod_style_ref
+    - node.type.category_pair_page_l2_underwear
+  module:
+    - text
+    - user
+id: node.category_pair_page_l2_underwear.default
+targetEntityType: node
+bundle: category_pair_page_l2_underwear
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_prod_collection_ref: true
+  field_prod_style_ref: true
+  langcode: true
+  search_api_excerpt: true

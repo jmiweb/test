@@ -1,0 +1,273 @@
+uuid: e1508b57-9338-4707-9862-ce253be805af
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.underwear
+    - field.field.commerce_product.underwear.field_product_page_design_images
+    - field.field.commerce_product.underwear.field_product_page_display_label
+    - field.field.commerce_product.underwear.field_product_page_features
+    - field.field.commerce_product.underwear.field_product_page_fit_image
+    - field.field.commerce_product.underwear.field_product_page_material_desc
+    - field.field.commerce_product.underwear.field_product_page_package_ops
+    - field.field.commerce_product.underwear.field_product_page_price_label
+    - field.field.commerce_product.underwear.field_product_page_size_chart_fi
+    - field.field.commerce_product.underwear.field_product_prefix
+    - field.field.commerce_product.underwear.field_product_teaser_description
+    - field.field.commerce_product.underwear.field_product_teaser_features
+    - field.field.commerce_product.underwear.field_product_teaser_image
+    - field.field.commerce_product.underwear.field_u_collection_ref
+    - field.field.commerce_product.underwear.field_u_style_ref
+  module:
+    - commerce
+    - field_group
+    - media_library
+    - paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_product_page:
+      children:
+        - field_product_page_display_label
+        - field_product_page_material_desc
+        - field_product_page_package_ops
+        - field_product_page_price_label
+        - field_product_page_features
+        - field_product_page_size_chart_fi
+        - group_images
+      parent_name: ''
+      weight: 5
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+        formatter: closed
+      label: 'Product Page'
+    group_categorize:
+      children:
+        - field_u_collection_ref
+        - field_u_style_ref
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        open: false
+        weight: 0
+      label: Categorize
+    group_teaser_view_grouping_page:
+      children:
+        - field_product_teaser_description
+        - field_product_teaser_features
+        - field_product_teaser_image
+      parent_name: ''
+      weight: 6
+      format_type: details
+      region: content
+      format_settings:
+        description: 'These fields are used on the Level 2 pages to display this product''s information. Serves as a "teaser" to the main product page. '
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+        formatter: closed
+      label: 'Teaser View / Level 2 Page View'
+    group_images:
+      children:
+        - field_product_page_fit_image
+        - field_product_page_design_images
+      parent_name: group_product_page
+      weight: 14
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        open: false
+      label: Images
+id: commerce_product.underwear.default
+targetEntityType: commerce_product
+bundle: underwear
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_product_page_design_images:
+    type: entity_reference_paragraphs
+    weight: 16
+    settings:
+      title: 'Product Design Image'
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: product_design_images
+    third_party_settings: {  }
+    region: content
+  field_product_page_display_label:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_page_features:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_page_fit_image:
+    type: media_library_widget
+    weight: 15
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_product_page_material_desc:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_page_package_ops:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_page_price_label:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_page_size_chart_fi:
+    type: media_library_widget
+    weight: 13
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_product_prefix:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_teaser_description:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_product_teaser_features:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_product_teaser_image:
+    type: media_library_widget
+    weight: 13
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_u_collection_ref:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_u_style_ref:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 7
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 11
+    region: content
+    third_party_settings: {  }
+  stores:
+    type: commerce_entity_select
+    weight: 0
+    region: content
+    settings:
+      hide_single_entity: true
+      autocomplete_threshold: 7
+      autocomplete_size: 60
+      autocomplete_placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  variations: true

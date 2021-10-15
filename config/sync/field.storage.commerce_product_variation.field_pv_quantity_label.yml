@@ -1,0 +1,21 @@
+uuid: b5d758a4-420b-4d6d-ac67-5a46d2eafb34
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.field_pv_quantity_label
+field_name: field_pv_quantity_label
+entity_type: commerce_product_variation
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

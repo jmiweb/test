@@ -1,0 +1,28 @@
+uuid: c88721a7-2a55-4556-95fa-a9513db4548f
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.underwear
+    - field.storage.commerce_product.field_product_teaser_image
+    - media.type.image_upload
+id: commerce_product.underwear.field_product_teaser_image
+field_name: field_product_teaser_image
+entity_type: commerce_product
+bundle: underwear
+label: 'Teaser Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image_upload: image_upload
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
