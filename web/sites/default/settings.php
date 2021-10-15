@@ -854,4 +854,4 @@ $settings['config_sync_directory'] = '../config/sync';
 // drush cset system.site uuid dd7496e0-fd37-4376-ae8e-dfe2c4b01dc2
 // drush cset language.entity.en uuid ee2273b2-bd1e-4874-b158-66e70b7904de
 // Added comment for git training test kirby
-// Add comment test for kirby
+// Add comment test for kirby2
